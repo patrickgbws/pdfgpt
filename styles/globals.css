@@ -1,76 +1,386 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
- 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
- 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
- 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
- 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
- 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
- 
-    --radius: 0.5rem;
-  }
- 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
- 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
- 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
- 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
- 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
- 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
- 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
- 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
- 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  }
-}
- 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+
+        --primary: 222.2 47.4% 11.2%;
+        --primary-foreground: 210 40% 98%;
+
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 222.2 84% 4.9%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
+
+        --card: 222.2 84% 4.9%;
+        --card-foreground: 210 40% 98%;
+
+        --popover: 222.2 84% 4.9%;
+        --popover-foreground: 210 40% 98%;
+
+        --primary: 210 40% 98%;
+        --primary-foreground: 222.2 47.4% 11.2%;
+
+        --secondary: 217.2 32.6% 17.5%;
+        --secondary-foreground: 210 40% 98%;
+
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 217.2 32.6% 17.5%;
+        --input: 217.2 32.6% 17.5%;
+        --ring: 212.7 26.8% 83.9%;
+    }
 }
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/*.container {*/
+/*    padding-right: 15px;*/
+/*    padding-left: 15px;*/
+/*}*/
+/*.row {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    margin-right: -15px;*/
+/*    margin-left: -15px;*/
+/*}*/
+/*.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {*/
+/*    position: relative;*/
+/*    width: 100%;*/
+/*    padding-right: 15px;*/
+/*    padding-left: 15px;*/
+/*}*/
+
+/*.title-box .sub-title {*/
+/*    background: rgba(33, 90, 231, 0.2);*/
+/*    padding: 7px 22px;*/
+/*    display: inline-block;*/
+/*    border-radius: 30px;*/
+/*    font-weight: 500;*/
+/*}*/
+/*!*Banner*!*/
+
+/*!* Footer *!*/
+/*!*footer*!*/
+/*.bg-footer {*/
+/*    padding-top: 120px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.bg-lightan {*/
+/*    background: linear-gradient(to bottom, rgba(33, 90, 231, 0.1) 30%, #fff 100%);*/
+/*}*/
+
+/*.row {*/
+/*    --bs-gutter-x: 1.5rem;*/
+/*    --bs-gutter-y: 0;*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    margin-top: calc(-1* var(--bs-gutter-y));*/
+/*    margin-right: calc(-.5* var(--bs-gutter-x));*/
+/*    margin-left: calc(-.5* var(--bs-gutter-x));*/
+/*}*/
+
+/*.col-lg-4 {*/
+/*    flex: 0 0 auto;*/
+/*    width: 33.33333333%;*/
+/*    padding: 0 12px;*/
+/*}*/
+
+/*.col-lg-7 {*/
+/*    flex: 0 0 auto;*/
+/*    width: 58.33333333%;*/
+/*    padding: 0 12px;*/
+/*}*/
+
+.f-18 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #424242;
+    text-transform: uppercase;
+}
+
+/*.footer-link a {*/
+/*    color: #585858;*/
+/*    line-height: 30px;*/
+/*    font-size: 15px;*/
+/*    -webkit-transition: all 0.5s;*/
+/*    background-color: transparent;*/
+/*    transition: all 0.5s;*/
+/*}*/
+
+/*.footer-link a:hover {*/
+/*    color: #215ae7;*/
+/*}*/
+
+/*.col-lg-12 {*/
+/*    flex: 0 0 auto;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.f-15 {*/
+/*    font-size: 15px;*/
+/*    font-weight: 600;*/
+/*    color: #505056;*/
+/*}*/
+
+/*ul {*/
+/*    margin-top: 0;*/
+/*    margin-bottom: 1rem;*/
+/*}*/
+/*.list-unstyled {*/
+/*    padding-left: 0;*/
+/*    list-style: none;*/
+/*}*/
+
+/*.offset-lg-1 {*/
+/*    margin-left: 8.33333333%;*/
+/*}*/
+
+
+/*.appie-color-mode {*/
+/*    transition: all 0.5s ease-in-out;*/
+/*}*/
+
+/*.appie-loader {*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.shop-related-product-slider-active .slick-dots li button {*/
+/*    background: #e2e2e2;*/
+/*}*/
+
+/*.appie-card-img {*/
+/*    width: 100%;*/
+/*    height: 200px;*/
+/*    object-fit: contain;*/
+/*}*/
+
+/*.appie-loader {*/
+/*    opacity: 0;*/
+/*}*/
+
+/*.appie-loader.active {*/
+/*    opacity: 100;*/
+/*}*/
+
+/*.appie-visible {*/
+/*    transition: all 0.5s ease-in-out;*/
+/*}*/
+
+/*.appie-visible {*/
+/*    opacity: 0;*/
+/*}*/
+
+/*.appie-visible.active {*/
+/*    opacity: 100;*/
+/*}*/
+
+/*.appie-init {*/
+/*    transition: all 0.5s ease-in-out;*/
+/*}*/
+
+/*.dark__btn__mon,*/
+/*.dark__btn__sun {*/
+/*    width: 20px;*/
+/*    height: auto;*/
+/*    display: inline-block;*/
+/*    margin-right: 14px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.appie-sticky.appie-header-area-dark.sticky {*/
+/*    background: #212531;*/
+/*}*/
+
+/*.dark__btn__sun svg {*/
+/*    color: #ffe000;*/
+/*}*/
+
+/*.dark__btn__mon svg {*/
+/*    color: #0e1133;*/
+/*}*/
+
+/*!* .appie-home-loader {*/
+/*  transition: all 0.5s ease-in-out;*/
+/*} *!*/
+/*.offcanvas_main_menu li ul.sub-menu {*/
+/*    padding-left: 20px;*/
+/*    overflow: hidden;*/
+/*    transition: all linear 0.65s;*/
+/*}*/
+
+/*.appie-fun-fact-box .appie-fun-fact-content .appie-fun-fact-item .title span {*/
+/*    font-size: 30px !important;*/
+/*    color: #fff !important;*/
+/*}*/
+
+/*.home-four-project {*/
+/*    background: #eef1f6;*/
+/*}*/
+
+/*.home-four-footer {*/
+/*    background: #ffffff;*/
+/*}*/
+
+/*.slick-dots li button:before {*/
+/*    content: "";*/
+/*}*/
+
+/*.appie-showcase-item {*/
+/*    margin-left: 10px;*/
+/*    margin-right: 10px;*/
+/*}*/
+
+/*.slick-dots li button:before {*/
+/*    content: "" !important;*/
+/*}*/
+
+/*.appie-faq-8-area .faq-play-box .faq-play-counter .box-1 h4 span {*/
+/*    font-size: 30px;*/
+/*    color: white;*/
+/*}*/
+
+/*@media (min-width: 1400px) {*/
+/*    .container-xxl,*/
+/*    .container-xl,*/
+/*    .container-lg,*/
+/*    .container-md,*/
+/*    .container-sm,*/
+/*    .container {*/
+/*        max-width: 1200px;*/
+/*    }*/
+/*}*/
+
+/*.appie-services-2-area.appie-services-8-area {*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*@media only screen and (min-width: 300px) and (max-width: 1024px) {*/
+/*    .appie-services-8-area .service-thumb {*/
+/*        margin-left: 0;*/
+/*        margin-right: 0;*/
+/*    }*/
+/*}*/
+
+/*.save-comment input:checked + label::after {*/
+/*    font-family: "Font Awesome 5 Pro";*/
+/*    content: "\f00c";*/
+/*}*/
+
+/*.appie-testimonial-area {*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.testimonial-about-slider-active .testimonial-parent-item {*/
+/*    display: flex !important;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.testimonial-box {*/
+/*    width: 770px !important;*/
+/*}*/
+
+/*.testimonial-box-about-slider-small-active*/
+/*.slick-center.slick-current*/
+/*.item*/
+/*.thumb*/
+/*img {*/
+/*    width: 70px;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.testimonial-box-about-slider-small-active .item .thumb img {*/
+/*    display: inline-block;*/
+/*    width: 40px;*/
+/*}*/
+
+/*.testimonial-box-about-slider-small-active .item .thumb {*/
+/*    align-items: center;*/
+/*}*/
+
+/*.testimonial-box-about-slider-small-active .slick-center.slick-current .item {*/
+/*    margin-top: -20px;*/
+/*}*/
+
+/*@media only screen and (min-width: 300px) and (max-width: 1024px) {*/
+/*    .testimonial-about-slider-active .testimonial-box {*/
+/*        box-shadow: none;*/
+/*        background: none;*/
+/*    }*/
+/*}*/
+
+/*@media only screen and (min-width: 770px) and (max-width: 1024px) {*/
+/*    .testimonial-about-slider-active .slick-arrow.next {*/
+/*        right: 15px;*/
+/*    }*/
+
+/*    .testimonial-about-slider-active .slick-arrow.prev {*/
+/*        left: 15px;*/
+/*    }*/
+/*}*/
+
+/*.devider {*/
+/*    display: inline-block;*/
+/*    width: 50px;*/
+/*    height: 2px;*/
+/*    background: #215ae7;*/
+/*    position: relative;*/
+/*    z-index: 1;*/
+/*    left: 10px;*/
+/*}*/
+/*.devider:before {*/
+/*    position: absolute;*/
+/*    left: -15px;*/
+/*    top: 0;*/
+/*    content: "";*/
+/*    height: 2px;*/
+/*    width: 10px;*/
+/*    background: #215ae7;*/
+/*}*/
