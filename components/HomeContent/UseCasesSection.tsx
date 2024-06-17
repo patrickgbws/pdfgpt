@@ -107,11 +107,12 @@ const UseCasesSection: React.FC = () => {
                             <h5 className="sub-title text-primary f-13 uppercase">Use Cases</h5>
                             <h2 className="text-[48px] capitalize leading-[55px] text-[#494D61] font-[600] my-[10px]">AI-Powered PDF Interaction for<br />Any Use Cases</h2>
                             <p className="max-w-[1000px] mx-auto text-[16px] leading-[28px] capitalize text-[#6d7c90] mt-4">
-                                At PDF AI Chatbot, we're a team of AI experts who get what it's like to deal with
+                                At PDF AI Chatbot, we&apos;re a team of AI experts who get what it&apos;s like to deal with
                                 dense, multi-page PDFs. Making it easier for you to find, summarize, and understand all
                                 that information is why PDF AI Chatbot was created - it works no matter what kind of
                                 PDF content you want to explore.
                             </p>
+
                         </div>
                     </div>
                 </div>
