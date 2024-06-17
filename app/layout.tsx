@@ -19,6 +19,7 @@ export const fontSans = FontSans({
     variable: "--font-sans",
 });
 
+
 export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
