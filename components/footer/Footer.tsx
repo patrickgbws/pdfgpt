@@ -2,6 +2,8 @@ import FooterLinks from "@/components/footer/FooterLinks";
 import FooterProducts from "@/components/footer/FooterProducts";
 import {siteConfig} from "@/config/site";
 import Link from "next/link";
+import Image from "next/image";
+import React from "react";
 
 const FooterProductsNavLinks = [
     {
@@ -52,7 +54,13 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-lg-4">
                             <div className="mt-4">
-                                <img className="mb-[20px]" src="/images/logo-dark.png" alt="" height="22"/>
+                                <Image
+                                    src="/images/logo-dark.png"
+                                    alt="PDF AI Chatbot"
+                                    width={100}
+                                    height={22}
+                                    className="mb-[20px] h-[22px] w-auto"
+                                />
                                 <p className="text-muted mt-4 pt-1">Read and learn faster than ever with our PDF AI tool. Instantly get what you need from lengthy documents, saving you time and effort. </p>
                                 <p className="text-muted mt-1 pt-1">You are reaching a new level of efficiency!</p>
                                 <div className="team-social mt-4">
@@ -137,19 +145,6 @@ const Footer = () => {
 
                 </div>
             </section>
-            {/*<div*/}
-            {/*    className="mt-16 space-y-2 pt-6 pb-4 flex flex-col items-center bg-black text-sm text-gray-400 border-t">*/}
-            {/*    <FooterLinks/>*/}
-            {/*    <FooterProducts/>*/}
-            {/*    <div className="flex space-x-2">*/}
-            {/*        <div>{`©${currentYear}`}</div>*/}
-            {/*        {" "}*/}
-            {/*        <Link href={authors[0].twitter || authors[0].url} target="_blank">*/}
-            {/*            {authors[0].name}*/}
-            {/*        </Link>{" "}*/}
-            {/*        <div>All rights reserved.</div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
         </footer>
     );
 };
