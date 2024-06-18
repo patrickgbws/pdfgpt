@@ -50,5 +50,6 @@ export const siteConfig: SiteConfig = {
         title: baseSiteConfig.name,
         description: baseSiteConfig.description,
         images: [`${baseSiteConfig.url}/og.png`],
+        creator: baseSiteConfig.creator,
     },
 }
