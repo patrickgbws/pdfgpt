@@ -47,11 +47,11 @@ const UseCasesSection: React.FC = () => {
     const scrollSpeed = 30;  // 毫秒间隔，可以调整这个值来改变滚动速度
     const scrollStep = 1;    // 每次滚动的像素数，增加这个值可以加快滚动速度
 
-
     useEffect(() => {
-        const scrollEffect = (ref, direction = 'left') => {
+        const scrollEffect = (ref: React.RefObject<HTMLDivElement>, direction = 'left') => {
             const scrollContainer = ref.current;
-            let scrollInterval;
+            let scrollInterval: NodeJS.Timeout;
+
             const startScrolling = () => {
                 scrollInterval = setInterval(() => {
                     if (scrollContainer) {
@@ -121,30 +121,29 @@ const UseCasesSection: React.FC = () => {
                 <div className="overflow-hidden relative" style={{ whiteSpace: 'nowrap', zIndex: 1 }} ref={scrollContainerLeftRef}>
                     {Array(3).fill([...tagsLeft, ...tagsLeft]).flat().map((item, index) => (
                         <span key={index} className="gradient-border bg-[#f5f9ff] text-gray-700 py-2 px-8 text-[17px] rounded-full inline-flex items-center mx-2.5">
-                        <Image src="/images/icon/pdf.png" alt={item.alt} width={18} height={18} className="inline-block w-[18px] h-[18px] mr-2" />
+                            <Image src="/images/icon/pdf.png" alt={item.alt} width={18} height={18} className="inline-block w-[18px] h-[18px] mr-2" />
                             {item.text}
-                    </span>
+                        </span>
                     ))}
                 </div>
                 <div className="overflow-hidden relative mt-3" style={{ whiteSpace: 'nowrap', zIndex: 1 }} ref={scrollContainerRightRef}>
                     {Array(3).fill([...tagsRight, ...tagsRight]).flat().map((item, index) => (
                         <span key={index} className="gradient-border bg-[#f5f9ff] text-gray-700 py-2 px-8 text-[17px] rounded-full inline-flex items-center mx-2.5">
-                        <Image src="/images/icon/pdf.png" alt={item.alt} width={18} height={18} className="inline-block w-[18px] h-[18px] mr-2" />
+                            <Image src="/images/icon/pdf.png" alt={item.alt} width={18} height={18} className="inline-block w-[18px] h-[18px] mr-2" />
                             {item.text}
-                    </span>
+                        </span>
                     ))}
                 </div>
                 <div className="overflow-hidden relative mt-3" style={{ whiteSpace: 'nowrap', zIndex: 1 }} ref={scrollContainerLeft2Ref}>
                     {Array(3).fill([...tagsLeft2, ...tagsLeft2]).flat().map((item, index) => (
                         <span key={index} className="gradient-border bg-[#f5f9ff] text-gray-700 py-2 px-8 text-[17px] rounded-full inline-flex items-center mx-2.5">
-                        <Image src="/images/icon/pdf.png" alt={item.alt} width={18} height={18} className="inline-block w-[18px] h-[18px] mr-2" />
+                            <Image src="/images/icon/pdf.png" alt={item.alt} width={18} height={18} className="inline-block w-[18px] h-[18px] mr-2" />
                             {item.text}
-                    </span>
+                        </span>
                     ))}
                 </div>
             </div>
         </section>
-
     );
 };
 
