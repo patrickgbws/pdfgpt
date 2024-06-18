@@ -7,11 +7,13 @@ import Link from 'next/link';
 const FAQItemmessage = [
     {
         question_text: "Q1: What AI model does XXX use, and is it better than ChatPDF?",
-        answer_text: "A: XXX combines a range of AI models, including OpenAI's ChatGPT, Google Gemini, Together AI, Mixtral, Pinecone, and LangChain. It's one of the most versatile Chat PDF tools out there, and some say it's one of the best alternatives to ChatPDF.",
+        answer_text: "A: XXX combines a range of AI models, including OpenAI's ChatGPT, Google Gemini, Together AI, Mixtral, Pinecone, " +
+            "and LangChain. It's one of the most versatile Chat PDF tools out there, and some say it's one of the best alternatives to ChatPDF. ",
     },
     {
         question_text: "Q2: Is XXX PDFGPT free to use?",
-        answer_text: "A: Yes, at the moment, XXX is completely free to use. You can read PDFs, summarize them, and more without paying a dime. We're doing this to get user feedback and improve the tool, so dive in and give it a try while it's free!",
+        answer_text: "A: Yes, at the moment, XXX is completely free to use. You can read PDFs, summarize them, and more without paying a dime." +
+            " We're doing this to get user feedback and improve the tool, so dive in and give it a try while it's free!",
     },
     {
         question_text: "Q3: What are the limitations of XXX?",
@@ -102,9 +104,11 @@ const FaqSection = () => {
                     <div className="inner-container">
                         <div className="shape"></div>
                         <div className="text-box">
-                            <h2>PDF AI Chatbot is Listening <br/>- Talk to Your PDF AI Assistant</h2>
-                            <p>Streamline your PDF workflow with our PDF AI Chat tool. Talk to it, ask it what you need,
-                                and watch the answers roll in.</p>
+                            <h2>Talk to Your PDF AI Assistant <br/>- Straight to Knowledge Via Instant Q&A</h2>
+                            <p className="text-[16px] text-[#6a6a6a]">
+                                Streamline your PDF workflow with our PDF AI Chat tool. Talk to it,
+                                ask it what you need, and watch the answers roll in
+                            </p>
                         </div>
                         <div className="btn-box">
                             <a href="#" className="btn btn-primary capitalize"><span>Get Started for Free</span></a>

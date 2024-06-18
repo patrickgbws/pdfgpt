@@ -29,7 +29,13 @@ const baseSiteConfig = {
         shortcut: "/images/logo.png",
         apple: "/logo.png", // apple-touch-icon.png
     },
-    headerLinks: [],
+    headerLinks: [
+        { name: 'Home', href: "https://github.com/weijunext/clean-nextjs-starter", },
+        { name: 'Tools', href: "https://twitter.com/weijunext", },
+        { name: 'Abouts', href: "https://www.buymeacoffee.com/weijunext", },
+        { name: 'Contact Us', href: "https://www.buymeacoffee.com/weijunext", },
+        { name: 'Privacy Policy', href: "https://www.buymeacoffee.com/weijunext", },
+    ],
     footerLinks: [],
     footerProducts: []
 }
