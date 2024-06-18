@@ -54,7 +54,7 @@ export default async function RootLayout({
             defaultTheme={siteConfig.defaultNextTheme}
             enableSystem
         >
-            {/*<Header/>*/}
+            <Header/>
             <main className="flex flex-col items-center">{children}</main>
             <Footer/>
             <Analytics/>

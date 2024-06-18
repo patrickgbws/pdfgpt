@@ -51,7 +51,7 @@ const BannerSection = () => {
                         <div className="max-w-screen-xl w-full px-4 mx-auto relative">
                             {/* iframe 部分，底层视频 */}
                             <div
-                                className="absolute inset-0 flex items-center justify-center z-0 max-w-[820px] mx-auto mt-[30px] mb-[80px]">
+                                className="absolute inset-0 flex items-center justify-center z-0 max-w-[950px] mx-auto mt-[30px] mb-[80px]">
                                 <div className="relative w-full h-full"
                                      style={{paddingTop: "65%", borderRadius: "35px"}}>
                                     <iframe
