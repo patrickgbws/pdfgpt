@@ -42,7 +42,7 @@ const BannerSection = () => {
                                 work faster!</p>
 
                             <div className="mt-5">
-                                <a href="#" className="btn btn-primary me-3 capitalize">Chat with Your PDF for Free</a>
+                                <a href="#" className="btn btn-primary capitalize">Chat with Your PDF for Free</a>
                             </div>
                         </div>
                     </div>

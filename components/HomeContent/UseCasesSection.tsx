@@ -95,7 +95,7 @@ const UseCasesSection: React.FC = () => {
 
         scrollEffect(scrollContainerLeftRef, 'left');
         scrollEffect(scrollContainerRightRef, 'right');
-        scrollEffect(scrollContainerLeft2Ref, 'left2');
+        scrollEffect(scrollContainerLeft2Ref, 'left');
     }, [isPausedLeft, isPausedRight, isPausedLeft2]);
 
     return (

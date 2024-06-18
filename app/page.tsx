@@ -1,5 +1,8 @@
 import BannerSection from "@/components/HomeContent/BannerSection";
 import UseCasesSection from "@/components/HomeContent/UseCasesSection";
+import TestimonialsSection from "@/components/HomeContent/TestimonialsSection";
+import FaqSection from "@/components/HomeContent/FaqSection";
+
 
 export default function Home() {
 
@@ -7,6 +10,8 @@ export default function Home() {
         <>
             <BannerSection />
             <UseCasesSection />
+            <TestimonialsSection />
+            <FaqSection />
         </>
     );
 }

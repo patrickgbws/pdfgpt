@@ -53,32 +53,20 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4">
-                            <div className="mt-4">
-                                <Image
-                                    src="/images/logo-dark.png"
-                                    alt="PDF AI Chatbot"
-                                    width={100}
-                                    height={22}
-                                    className="mb-[20px] h-[22px] w-auto"
-                                />
+                            <div className="mt-3">
+                                <p className="flex items-center mb-[20px]">
+                                    <Image
+                                        src="/images/logo.png"
+                                        alt="PDF AI Chatbot-logo"
+                                        width={100}
+                                        height={22}
+                                        className="h-[40px] w-auto"
+                                    />
+                                    <span className="text-[25px] font-bold ml-[8px]">{authors[0].name}</span>
+                                </p>
+
                                 <p className="text-muted mt-4 pt-1">Read and learn faster than ever with our PDF AI tool. Instantly get what you need from lengthy documents, saving you time and effort. </p>
                                 <p className="text-muted mt-1 pt-1">You are reaching a new level of efficiency!</p>
-                                <div className="team-social mt-4">
-                                    <ul className="list-inline mb-0">
-                                        <li className="list-inline-item">
-                                            <a href="" className="text-reset"><i className="mdi mdi-facebook"></i></a>
-                                        </li>
-                                        <li className="list-inline-item">
-                                            <a href="" className="text-reset"><i className="mdi mdi-twitter"></i></a>
-                                        </li>
-                                        <li className="list-inline-item">
-                                            <a href="" className="text-reset"><i className="mdi mdi-google"></i></a>
-                                        </li>
-                                        <li className="list-inline-item">
-                                            <a href="" className="text-reset"><i className="mdi mdi-pinterest"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
 
