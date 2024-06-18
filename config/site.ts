@@ -18,6 +18,7 @@ const baseSiteConfig = {
             twitter: 'https://twitter.com/weijunext',
         }
     ],
+    creator: 'PDF AI Chatbot',
     themeColors: [
         {media: '(prefers-color-scheme: light)', color: 'white'},
         {media: '(prefers-color-scheme: dark)', color: 'black'},
