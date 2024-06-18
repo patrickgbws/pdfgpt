@@ -44,22 +44,27 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({question, answ
 
     return (
         <div className="faq-item">
-            <div className="faq-question" onClick={toggleFAQ}>
-                <div className="text-[16px] text-[#3482f0] font-[600]">{question}</div>
-                <div className="faq-icon">
-                    <div className="icon-16px"
-                         style={{
-                             transform: `translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(${isOpen ? 45 : 0}deg) skew(0deg, 0deg)`,
-                             transformStyle: 'preserve-3d',
-                         }}>
-                        <div className="faq-icon-bar hoz"></div>
-                        <div className="faq-icon-bar ver"></div>
+            <ul className="pl-0 mb-0">
+                <li className="block">
+                    <div className="faq-question" onClick={toggleFAQ}>
+                        <div className="text-[17px] text-[#3f94fd] font-[600] capitalize">{question}</div>
+                        <div className="faq-icon">
+                            <div className="icon-16px"
+                                 style={{
+                                     transform: `translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(${isOpen ? 45 : 0}deg) skew(0deg, 0deg)`,
+                                     transformStyle: 'preserve-3d',
+                                 }}>
+                                <div className="faq-icon-bar hoz"></div>
+                                <div className="faq-icon-bar ver"></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div className="faq-answer" style={{height: isOpen ? 'auto' : '0px', overflow: 'hidden'}}>
-                <p className="faq-answer-text">{answer}</p>
-            </div>
+                    <div className="faq-answer" style={{height: isOpen ? 'auto' : '0px', overflow: 'hidden'}}>
+                        <p className="faq-answer-text">{answer}</p>
+                    </div>
+                </li>
+
+            </ul>
         </div>
     );
 };
@@ -67,45 +72,42 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({question, answ
 const FaqSection = () => {
     return (
         <>
-            <section className="bg-contact w-full">
-
-                <div className="container mx-auto row mt-3 pt-4">
-                    <div className="col-lg-12">
-                        <div className="title-box text-center">
-                            <h5 className="sub-title text-primary f-13 uppercase">Faq</h5>
-                            <h2 className="text-[48px] capitalize leading-[55px] text-[#494D61] font-[600] my-[10px]">Frequently
-                                Asked Questions</h2>
-                            <p className="max-w-[1000px] mx-auto text-[16px] leading-[28px] capitalize text-[#6d7c90] mt-4">
-                                [一段描述]
-                            </p>
+            <section className="faq-style-two pt-[40px] pb-[30px] w-full">
+                <div className="container">
+                    <div className="sec-title mb-[40px] text-center">
+                        <span className="sub-title">PDF AI Chatbot -- Faqs</span>
+                        <h2>Frequently Asked Questions</h2>
+                        <p className="max-w-[900px] mx-auto text-[15px] leading-[27px] capitalize text-[#6d7c90] mt-4">
+                            At PDF AI Chatbot, we&apos;re a team of AI experts who get what it&apos;s like to deal with
+                            dense, multi-page PDFs. Making it easier for you to find, summarize, and understand all
+                            that information is why PDF AI Chatbot was created - it works no matter what kind of
+                            PDF content you want to explore.
+                        </p>
+                    </div>
+                    <div className="inner-box">
+                        <div className="grid faq-wrap">
+                            {FAQItemmessage.map((faq, index) => (
+                                <FAQItem
+                                    key={index}
+                                    question={faq.question_text}
+                                    answer={faq.answer_text}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
-                <div className="container mt-[40px]">
-                    <div className="grid faq-wrap">
-                        {FAQItemmessage.map((faq, index) => (
-                            <FAQItem
-                                key={index}
-                                question={faq.question_text}
-                                answer={faq.answer_text}
-                            />
-                        ))}
-                    </div>
-                </div>
+            </section>
+            <section className="cta-style-two w-full mt-[60px]">
                 <div className="container">
-                    <div className="contact-box">
-                        <div className="flex flex-row items-center justify-between">
-                            <div className="w-[60%]">
-                                <div className="pr-[20px]">
-                                    <h5 className="text-[30px] leading-[35px] pd-[10px] font-bold">XXX Chatbot is
-                                        Listening - Talk to Your PDF AI Assistant</h5>
-                                    <p className="mb-[0] mt-3 pr-[50px]">Streamline your PDF workflow with our PDF AI
-                                        Chat tool. Talk to it, ask it what you need, and watch the answers roll in.</p>
-                                </div>
-                            </div>
-                            <div className="w-[auto]">
-                                <a href="#" className="btn btn-primary capitalize">Get Started for Free</a>
-                            </div>
+                    <div className="inner-container">
+                        <div className="shape"></div>
+                        <div className="text-box">
+                            <h2>PDF AI Chatbot is Listening <br/>- Talk to Your PDF AI Assistant</h2>
+                            <p>Streamline your PDF workflow with our PDF AI Chat tool. Talk to it, ask it what you need,
+                                and watch the answers roll in.</p>
+                        </div>
+                        <div className="btn-box">
+                            <a href="#" className="btn btn-primary capitalize"><span>Get Started for Free</span></a>
                         </div>
                     </div>
                 </div>

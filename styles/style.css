@@ -467,8 +467,8 @@ hr {
 }
 
 .btn-primary {
-    background: #215ae7;
-    border-color: #215ae7 !important;
+    background: #3f94fd;
+    border-color: #3f94fd !important;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.focus, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -1956,7 +1956,7 @@ textarea.form-control {
 }
 
 .footer-link a {
-    color: #585858;
+    color: #A9A7B0;
     line-height: 30px;
     font-size: 15px;
     -webkit-transition: all 0.5s;
@@ -2072,7 +2072,9 @@ textarea.form-control {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1140px !important;
+        position: static;
+        max-width: 1320px;
+        padding: 0 15px;
     }
 }
 

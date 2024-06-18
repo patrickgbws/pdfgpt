@@ -48,93 +48,96 @@ const Footer = () => {
     const {authors} = siteConfig;
 
     return (
-        <footer>
-            <section className="bg-footer bg-lightan">
+        <footer className="bg-[#020202] relative">
+            <section>
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-4">
-                            <div className="mt-3">
-                                <p className="flex items-center mb-[20px]">
-                                    <Image
-                                        src="/images/logo.png"
-                                        alt="PDF AI Chatbot-logo"
-                                        width={100}
-                                        height={22}
-                                        className="h-[40px] w-auto"
-                                    />
-                                    <span className="text-[25px] font-bold ml-[8px]">{authors[0].name}</span>
-                                </p>
-
-                                <p className="text-muted mt-4 pt-1">Read and learn faster than ever with our PDF AI tool. Instantly get what you need from lengthy documents, saving you time and effort. </p>
-                                <p className="text-muted mt-1 pt-1">You are reaching a new level of efficiency!</p>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-7 offset-lg-1">
-                            <div className="row">
-                                <div className="col-lg-4">
-                                    {FooterProductsNavLinks.map((section) => (
-                                        <div key={section.title} className="mt-4">
-                                            <h5 className="f-18">{section.title}</h5>
-                                            <ul className="list-unstyled footer-link my-4">
-                                                {section.children.map((item) => (
-                                                    <li key={item.title}>
-                                                        <Link href={item.href} legacyBehavior><a>{item.title}</a></Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    ))}
-                                </div>
-                                <div className="col-lg-4">
-                                    {FooterCompareNavLinks.map((section) => (
-                                        <div key={section.title} className="mt-4">
-                                            <h5 className="f-18">{section.title}</h5>
-                                            <ul className="list-unstyled footer-link my-4">
-                                                {section.children.map((item) => (
-                                                    <li key={item.title}>
-                                                        <Link href={item.href} legacyBehavior><a>{item.title}</a></Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    ))}
-                                </div>
-                                <div className="col-lg-4">
-                                    {FooterAboutNavLinks.map((section) => (
-                                        <div key={section.title} className="mt-4">
-                                            <h5 className="f-18">{section.title}</h5>
-                                            <ul className="list-unstyled footer-link my-4">
-                                                {section.children.map((item) => (
-                                                    <li key={item.title}>
-                                                        <Link href={item.href} legacyBehavior><a>{item.title}</a></Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    ))}
+                    <div className="pt-[80px] pb-[60px]">
+                        <div className="row clearfix">
+                            <div className="col-lg-3 col-md-6 col-sm-12 footer-column">
+                                <div className="footer-widget logo-widget">
+                                    <figure className="mb-[30px]">
+                                        <Link href="/" legacyBehavior>
+                                            <a className="flex flex-row items-center text-[#FFFFFF] text-[23px] font-bold">
+                                                <Image
+                                                    src="/images/logo.png"
+                                                    alt="PDF AI Chatbot-logo"
+                                                    width={100}
+                                                    height={22}
+                                                    className="h-[40px] w-auto mr-[8px]"/>
+                                                {authors[0].name}
+                                            </a>
+                                        </Link>
+                                    </figure>
+                                    <p className="max-w-[500px] text-[16px] text-[#A9A7B0] leading-[28px] mb-[20px]">
+                                        Read and learn faster than ever with our PDF AI
+                                        tool. Instantly get what you need from lengthy documents, saving you time and
+                                        effort.
+                                    </p>
+                                    <p className="max-w-[500px] text-[16px] text-[#A9A7B0] leading-[28px] mb-[40px]">
+                                        You are reaching a new level of efficiency!
+                                    </p>
                                 </div>
                             </div>
-
+                            <div className="col-lg-3 col-md-6 col-sm-12 footer-column">
+                                {FooterProductsNavLinks.map((section) => (
+                                    <div key={section.title} className="ml-[100px] footer-widget links-widget ">
+                                        <h5 className="relative block mb-[15px] text-[#ffffff] text-[24px] leading-[32px] font-[600]">{section.title}</h5>
+                                        <div className="widget-content">
+                                            <ul className="list-unstyled footer-link my-4">
+                                                {section.children.map((item) => (
+                                                    <li key={item.title} className="relative block text-[16px] text-[#A9A7B0] leading-[30px]">
+                                                        <Link href={item.href} legacyBehavior><a className="hover:text-[#3f94fd]">{item.title}</a></Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="col-lg-3 col-md-6 col-sm-12 footer-column">
+                                {FooterCompareNavLinks.map((section) => (
+                                    <div key={section.title} className="ml-[70px] footer-widget links-widget ">
+                                        <h5 className="relative block mb-[15px] text-[#ffffff] text-[24px] leading-[32px] font-[600]">{section.title}</h5>
+                                        <div className="widget-content">
+                                            <ul className="list-unstyled footer-link my-4">
+                                                {section.children.map((item) => (
+                                                    <li key={item.title} className="relative block text-[16px] text-[#A9A7B0] leading-[30px]">
+                                                        <Link href={item.href} legacyBehavior><a className="hover:text-[#3f94fd]">{item.title}</a></Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="col-lg-3 col-md-6 col-sm-12 footer-column">
+                                {FooterAboutNavLinks.map((section) => (
+                                    <div key={section.title} className="ml-[50px] footer-widget links-widget ">
+                                        <h5 className="relative block mb-[15px] text-[#ffffff] text-[24px] leading-[32px] font-[600]">{section.title}</h5>
+                                        <div className="widget-content">
+                                            <ul className="list-unstyled footer-link my-4">
+                                                {section.children.map((item) => (
+                                                    <li key={item.title} className="relative block text-[16px] text-[#A9A7B0] leading-[30px]">
+                                                        <Link href={item.href} legacyBehavior><a className="hover:text-[#3f94fd]">{item.title}</a></Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-
                     </div>
-
-                    <hr className="my-3 border-t-1 border-solid border-[#9197b5] border-opacity-25"/>
-
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <p className="text-center text-muted mb-0 f-15">
-                                {`Copyright © ${currentYear} `} All Rights Reserved By <Link
-                                href="/">{authors[0].name}</Link>
-                            </p>
-                        </div>
-                    </div>
-
+                </div>
+                <div className="bg-[#111111] relative py-[30px]">
+                    <p className="text-[#A9A7B0] text-center my-0 font-bold">
+                        {`Copyright © ${currentYear} `} All Rights Reserved By <Link href="/"
+                                                                                     className="text-[#3f94fd]">{authors[0].name}</Link>
+                    </p>
                 </div>
             </section>
         </footer>
-    );
+);
 };
 
 export default Footer;

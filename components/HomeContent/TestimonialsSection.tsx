@@ -2,9 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Link from 'next/link';
 
 const testimonials = [
@@ -81,42 +78,163 @@ const TestimonialsSection = () => {
                         <div className="col-lg-12">
                             <div className="title-box text-center">
                                 <h5 className="sub-title text-primary f-13 uppercase">PDF AI Chatbot -- testimonial</h5>
-                                <h2 className="text-[48px] capitalize leading-[55px] text-[#494D61] font-[600] my-[10px]">Customers Love PDF AI Chatbot</h2>
+                                <h2 className="text-[48px] capitalize leading-[55px] text-[#494D61] font-[600] my-[10px]">Customers
+                                    Love PDF AI Chatbot</h2>
                                 <p className="max-w-[1000px] mx-auto text-[16px] leading-[28px] capitalize text-[#6d7c90] mt-4">
-                                    We understand how challenging it can be to work with PDFs, <br/>which is why we&apos;ve created AI PDF chat features that users love!
+                                    We understand how challenging it can be to work with PDFs, <br/>which is why
+                                    we&apos;ve created AI PDF chat features that users love!
                                 </p>
 
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <Slider {...settings} className="mt-[40px] px-[45px] grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-3">
-                            {testimonials.map((testimonial, index) => (
-                                <div key={index} className="bg-white rounded-[30px] border border-gray-200 shadow-custom p-[32px] flex flex-col gap-y-5">
-                                    <div className="flex gap-4 justify-start items-center">
-                                        <div className="w-[40px] h-[40px] flex-shrink-0 overflow-hidden rounded-[360px] border-2 border-solid border-[#1e58eb]">
-                                            <Image src={testimonial.img} alt={testimonial.imgalt} width={40} height={40} className="object-cover" />
+                    <div className="row justify-content-center mt-5 pt-5">
+
+                        <div className="col-lg-10">
+
+                            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+
+
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active">
+                                        <div className="client-box mt-4">
+                                            <div className="client-img d-flex">
+                                                {/*<img src="images/users/img-1.jpg" className="img-fluid rounded-circle" alt="">*/}
+
+
+                                                <div className="client-content ps-4">
+                                                    <h5 className="line-height_1_6 f-18">“I feel confident imposing
+                                                        change
+                                                        on
+                                                        myself. It's a lot more fun proging than looking back.
+                                                        That's why I ultricies enim at malesuada
+                                                        creatures and the whole of quis consectetur nunc diam on tortor
+                                                        neaded
+                                                        to sit amet semper throw curve balls.”
+                                                    </h5>
+
+                                                    <div className="client-icon">
+                                                        <i className="mdi mdi-format-quote-close"></i>
+                                                    </div>
+
+                                                    <h5 className="f-18">Brandon Carney</h5>
+                                                    <p className="text-primary mb-0">- Designer</p>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <div className="flex flex-col">
-                                            <div className="text-[16px] font-[600] pb-[2px]">{testimonial.name}</div>
-                                            <div className="text-[12px] text-[#7c7c7c] leading-[14px]">{testimonial.role}, {testimonial.unit}</div>
+                                    </div>
+
+                                    <div className="carousel-item">
+                                        <div className="client-box mt-4">
+                                            <div className="client-img d-flex">
+                                                {/*<img src="images/users/img-2.jpg" className="img-fluid rounded-circle" alt="">*/}
+
+
+                                                <div className="client-content ps-4">
+                                                    <h5 className="line-height_1_6 f-18">
+                                                        “Our task must be to free ourselves by widening our circle of
+                                                        comsion to
+                                                        embrace all living creatures and the
+                                                        whole of quis consectetur nunc sit amet semper justo.
+                                                        scelerisque
+                                                        pretium dolor, sit amet vehicula erat pelleque nature and its
+                                                        beauty.”
+                                                    </h5>
+
+                                                    <div className="client-icon">
+                                                        <i className="mdi mdi-format-quote-close"></i>
+                                                    </div>
+
+                                                    <h5 className="f-18">Jeremiah Eskew</h5>
+                                                    <p className="text-primary mb-0">- Designer</p>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
-                                    <div className="quote">
-                                        <div className="quote-mark">" </div>
-                                        <div>{testimonial.content}</div>
-                                        <div className="quote-mark"> "</div>
+
+                                    <div className="carousel-item">
+                                        <div className="client-box mt-4">
+                                            <div className="client-img d-flex">
+                                                {/*<img src="images/users/img-3.jpg" className="img-fluid rounded-circle" alt="">*/}
+
+
+                                                <div className="client-content ps-4">
+                                                    <h5 className="line-height_1_6 f-18">
+                                                        “I've learned that people will forget what you said, people will
+                                                        forget
+                                                        what you did, but people will never aliquam in nunc
+                                                        quis tincidunt forget how you never forget how donec in
+                                                        efficitur
+                                                        lectus, nec lobortis metus you made vestibulum egestas them
+                                                        feel.”
+                                                    </h5>
+
+                                                    <div className="client-icon">
+                                                        <i className="mdi mdi-format-quote-close"></i>
+                                                    </div>
+
+                                                    <h5 className="f-18">Zachary Tevis</h5>
+                                                    <p className="text-primary mb-0">- Designer</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div>
-                                        {testimonial.tags.map((tag, tagIndex) => (
-                                            <span key={tagIndex} className="text-[#1e58eb] pr-[5px]">
-                                        {tag}{tagIndex !== testimonial.tags.length - 1 ? ' ' : ''}
-                                    </span>
-                                        ))}
+
+                                    <div className="carousel-item">
+                                        <div className="client-box mt-4">
+                                            <div className="client-img d-flex">
+                                                {/*<img src="images/users/img-4.jpg" className="img-fluid rounded-circle" alt="">*/}
+                                                <div className="client-content ps-4">
+                                                    <h5 className="line-height_1_6 f-18">
+                                                        “I've learned that people will forget what you said, people will
+                                                        forget
+                                                        what you did, but people will never forget how
+                                                        donec in efficitur lectus, nec lobortis enim at malesuada nibh
+                                                        diam on
+                                                        tortor neaded to metus you made them feel.”
+                                                    </h5>
+
+                                                    <div className="client-icon">
+                                                        <i className="mdi mdi-format-quote-close"></i>
+                                                    </div>
+
+                                                    <h5 className="f-18">William Alderman </h5>
+                                                    <p className="text-primary mb-0">- Designer</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
+
+
                                 </div>
-                            ))}
-                        </Slider>
+
+                                <div className="carousel-indicators mb-0">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="0" className="active" aria-current="true"
+                                            aria-label="Slide 1">
+                                        {/*<img src="images/users/img-1.jpg" alt="" className=" testi-img img-fluid rounded mx-auto d-block">*/}
+                                    </button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="1" aria-label="Slide 2">
+                                        {/*<img src="images/users/img-2.jpg" alt="" className=" testi-img img-fluid rounded mx-auto d-block">*/}
+                                    </button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="2" aria-label="Slide 3">
+                                        {/*<img src="images/users/img-3.jpg" alt="" className=" testi-img img-fluid rounded mx-auto d-block">*/}
+                                    </button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide-to="3" aria-label="Slide 4">
+                                        {/*<img src="images/users/img-4.jpg" alt="" className=" testi-img img-fluid rounded mx-auto d-block">*/}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </section>
