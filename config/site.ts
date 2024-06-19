@@ -36,8 +36,6 @@ const baseSiteConfig = {
         { name: 'Contact Us', href: "https://www.buymeacoffee.com/weijunext", },
         { name: 'Privacy Policy', href: "https://www.buymeacoffee.com/weijunext", },
     ],
-    footerLinks: [],
-    footerProducts: []
 }
 
 export const siteConfig: SiteConfig = {
