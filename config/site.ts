@@ -4,18 +4,18 @@ import {MdEmail} from "react-icons/md";
 import {SiBuymeacoffee, SiJuejin} from "react-icons/si";
 
 const baseSiteConfig = {
-    name: "PDF AI Chatbot: Free PDFGPT - The Best PDF AI Chatbot for Reading Any Documets Faster",
+    name: "PDF AI Chatbot: Free PDFGPT - The Best PDF AI Chatbot for Reading Any Documents Faster",
     description:
-        "Use XXX to chat with your PDF. This free PDFGPT will summarize and answer any questions from documents in no time. Just ask your pdf, AI will do the rest.",
-    url: "https://starter.weijunext.com",
+        "Use PDF AI Chatbot to chat with your PDF. This free PDFGPT will summarize and answer any questions from documents in no time. Just ask your pdf, AI will do the rest.",
+    url: "https://pdfgpt-beta.vercel.app/",
     ogImage: "https://starter.weijunext.com/og.png",
     metadataBase: '/',
-    keywords: ["next.js starter", "next.js template", "awesome starter", "study next.js"],
+    keywords: [],
     authors: [
         {
             name: "PDF AI Chatbot",
-            url: "https://weijunext.com",
-            twitter: 'https://twitter.com/weijunext',
+            url: "https://pdfgpt-beta.vercel.app/",
+            twitter: '',
         }
     ],
     creator: 'PDF AI Chatbot',
@@ -27,7 +27,7 @@ const baseSiteConfig = {
     icons: {
         icon: "/images/logo.png",
         shortcut: "/images/logo.png",
-        apple: "/logo.png", // apple-touch-icon.png
+        apple: "/logo.png",
     },
     headerLinks: [],
     footerLinks: [],
