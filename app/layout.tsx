@@ -6,8 +6,7 @@ import {ThemeProvider} from "@/components/ThemeProvider";
 import {siteConfig} from "@/config/site";
 import {cn} from "@/lib/utils";
 import "@/styles/globals.css";
-import "@/styles/loading.css";
-import "@/styles/bootstrap.min.css";
+// import "@/styles/bootstrap.min.css";
 import "@/styles/style.css";
 // import "@/styles/materialdesignicons.min.css";
 import {Analytics} from "@vercel/analytics/react";
@@ -54,7 +53,7 @@ export default async function RootLayout({
             defaultTheme={siteConfig.defaultNextTheme}
             enableSystem
         >
-            <Header/>
+            {/*<Header/>*/}
             <main className="flex flex-col items-center">{children}</main>
             <Footer/>
             <Analytics/>

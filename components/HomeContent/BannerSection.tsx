@@ -4,21 +4,21 @@ import Link from 'next/link';
 
 const iframedescriptiondata = [
     {
-        title: 'PDF to AI Conversation',
-        alt: 'PDF to AI Conversation',
-        description: "You can ask anything about your PDFs. Just type in what you need, and get responses in real-time.",
-        image: '/images/icon/iframedescription-1.png',
-    },
-    {
         title: 'Save Time',
         alt: 'Save Time',
         description: "Don't waste time hunting for information. Ask for any summary or extract key information - all in seconds.",
+        image: '/images/icon/iframedescription-1.png',
+    },
+    {
+        title: 'Easier Comprehension',
+        alt: 'Easier Comprehension',
+        description: "Break down difficult concepts and receive contextual explanations effortlessly via PDF to AI Conversation.",
         image: '/images/icon/iframedescription-2.png',
     },
     {
-        title: 'Easy Learning',
-        alt: 'Easy Learning',
-        description: "We all know how things keep interesting when interacting with your documents while learning.",
+        title: 'Learning Fun',
+        alt: 'Learning Fun',
+        description: "Keep your learning engaging and fun by interacting directly with your documents.",
         image: '/images/icon/iframedescription-3.png',
     },
 ];
@@ -26,32 +26,46 @@ const iframedescriptiondata = [
 const BannerSection = () => {
     return (
         <>
-            <section className="bg-lightan w-full py-[60px] relative">
-                <div className="bg-overlay"></div>
-                <div className="container">
-                    <div className="row justify-content-center pt-5 mt-5">
-                        <div className="col-lg-8 text-center">
-                            <p className="inline-block border-2 border-solid border-[#215ae7] px-[22px] py-[5px] rounded-[30px] font-[600] text-[13px] text-[#215ae7] uppercase">Read
-                                Faster Your Documents</p>
-                            <h1 className="mx-auto max-w-4xl font-display text-[48px] font-bold tracking-tight text-slate-900 sm:text-7xl capitalize">Chat
-                                with Your PDFs, Powered by AI</h1>
-
-                            <p className="mx-auto mt-8 max-w-3xl text-[18px] leading-[30px] tracking-tight text-slate-700 dark:text-slate-500">Enough
-                                endless pages scrolling! Let your PDF AI summarize, analyze, translate, extract
-                                takeaways, and give you answers and insights instantly from documents. Read smarter,
-                                work faster!</p>
-
-                            <div className="mt-5">
-                                <a href="#" className="btn btn-primary capitalize">Chat with Your PDF for Free</a>
-                            </div>
+            <section className="pdfai-header w-full relative">
+                <div className="pdfai-header-background-overlay"></div>
+                <div className="container text-center">
+                    <div className="">
+                        <span className="sub-title">Read Faster Your Documents</span>
+                        <div className="title_whole position-relative ">
+                            <h1 className="text-[55px] font-bold leading-[62px] text-[#293a51] capitalize">
+                                Chat with Your PDFs, <br/>Powered by AI
+                            </h1>
+                        </div>
+                        <p className="max-w-[700px] mx-auto text-[18px] text-[#6b7989] font-[500] leading-[28px] pt-[40px] pb-[50px] m-0">
+                            Enough endless pages scrolling! Let your PDF AI summarize, analyze,
+                            translate, extract takeaways, and give you answers and insights instantly
+                            from documents. Read smarter, work faster!
+                        </p>
+                    </div>
+                    <div className="mb-[25px]">
+                        <Link
+                            href="/"
+                            rel="nofollow"
+                            target="_blank"
+                            className="theme_btn">
+                            Chat with Your PDF for Free
+                        </Link>
+                    </div>
+                    <div className="mt-[20px]">
+                        <div className="font-[400] text-[13px] text-[#6b7989]">Powered by Openai & ‎Google Gemini
+                            (Formerly Bard)
                         </div>
                     </div>
-                    <div className="col-lg-12 mt-[65px]">
+                </div>
+            </section>
+            <section className="pdfai-video w-full relative">
+                <div className="max-w-[1140px] mx-auto">
+                    <div className="col-lg-12">
                         {/* iframe */}
                         <div className="max-w-screen-xl w-full px-4 mx-auto relative">
                             {/* iframe 部分，底层视频 */}
                             <div
-                                className="absolute inset-0 flex items-center justify-center z-0 max-w-[950px] mx-auto mt-[30px] mb-[80px]">
+                                className="absolute inset-0 flex items-center justify-center z-0 max-w-[850px] mx-auto mt-[30px] mb-[80px]">
                                 <div className="relative w-full h-full"
                                      style={{paddingTop: "65%", borderRadius: "35px"}}>
                                     <iframe
@@ -84,24 +98,29 @@ const BannerSection = () => {
                         </div>
 
                         {/* iframedescription */}
-                        <div className=" mx-auto row mt-3 pt-4">
-                            {iframedescriptiondata.map((item, index) => (
-                                <div key={index} className="col-lg-4">
-                                    <div className="service-box mt-4">
-                                        <div className="service-icon icon-xxl uim-icon-primary flex justify-center items-center">
-                                            <Image
-                                                src={item.image}
-                                                alt={item.alt}
-                                                width={62}
-                                                height={62}
-                                                className="w-auto h-[33px]"
-                                            />
+                        <div className=" mx-auto row mt-[30px] px-[10px]">
+
+                            <div className="flex flex-row">
+                                {iframedescriptiondata.map((item, index) => (
+                                    <div key={index} className="col-lg-4">
+                                        <div className="pdfai-video-description-iconbox equal-height">
+                                            <div className="icon">
+                                                <Image
+                                                    src={item.image}
+                                                    alt={item.alt}
+                                                    width={62}
+                                                    height={62}
+                                                    className="w-auto h-[25px]"
+                                                />
+                                            </div>
+                                            <div className="title_20">{item.title}</div>
+                                            <p className="text-[15px] leading-[23px] font-[400] text-[#45485a]">
+                                                {item.description}
+                                            </p>
                                         </div>
-                                        <h5 className="f-20 mt-4 pt-2">{item.title}</h5>
-                                        <p className="text-muted mt-3 mb-0">{item.description}</p>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
