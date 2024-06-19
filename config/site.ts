@@ -15,7 +15,7 @@ const baseSiteConfig = {
         {
             name: "PDF AI Chatbot",
             url: "https://pdfgpt-beta.vercel.app/",
-            twitter: '',
+            twitter: 'https://pdfgpt-beta.vercel.app/',
         }
     ],
     creator: 'PDF AI Chatbot',
