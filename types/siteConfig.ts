@@ -20,7 +20,6 @@ export type SiteConfig = {
     keywords: string[]
     authors: AuthorsConfig[]
     creator: string
-    ogImage: string
     headerLinks: Link[]
     themeColors?: string | ThemeColor[]
     defaultNextTheme?: string
@@ -37,12 +36,5 @@ export type SiteConfig = {
         description: string
         siteName: string
         images?: string[]
-    },
-    twitter: {
-        card: string
-        title: string
-        description: string
-        images?: string[]
-        creator: string
-    },
+    }
 }

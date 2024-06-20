@@ -9,7 +9,6 @@ import "@/styles/globals.css";
 import "@/styles/style.css";
 import {Analytics} from "@vercel/analytics/react";
 import {Viewport} from "next";
-import {Inter as FontSans} from "next/font/google";
 
 
 export const metadata = {
@@ -36,7 +35,7 @@ export default async function RootLayout({
         <head/>
         <body
             className={cn(
-                "min-h-screen bg-background antialiased",
+                "min-h-screen antialiased",
             )}
         >
         <ThemeProvider

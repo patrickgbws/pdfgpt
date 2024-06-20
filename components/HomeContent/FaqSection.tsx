@@ -157,53 +157,7 @@ const FaqSection = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="elementor-widget-wrap elementor-element-populated">
-                                <div
-                                    className="elementor-element elementor-element-e46feac elementor-widget elementor-widget-copygen-themebtns-v1"
-                                    data-id="e46feac" data-element_type="widget"
-                                    data-widget_type="copygen-themebtns-v1.default">
-                                    <div className="elementor-widget-container">
-
-                                    </div>
-                                </div>
-                                {/*<div>*/}
-                                {/*    <div>*/}
-                                {/*        <div>*/}
-                                {/*            <ul>*/}
-                                {/*                <li>*/}
-                                {/*                    <div className="d-flex">*/}
-                                {/*                        <div className="icon"><i className=" copy-check-circle-fill"></i></div>*/}
-                                {/*                        <a className="links" href="#">No credit card required</a>*/}
-                                {/*                    </div>*/}
-                                {/*                </li>*/}
-                                {/*                <li>*/}
-                                {/*                    <div className="d-flex">*/}
-                                {/*                        <div className="icon"><i class=" copy-check-circle-fill"></i></div>*/}
-                                {/*                        <a class="links" href="#">Cancel anytime </a>*/}
-                                {/*                    </div>*/}
-                                {/*                </li>*/}
-                                {/*                <li>*/}
-                                {/*                    <div class="d-flex">*/}
-                                {/*                        <div class="icon"><i class=" copy-check-circle-fill"></i></div>*/}
-                                {/*                        <a class="links" href="#">10+ tools to expolore </a>*/}
-                                {/*                    </div>*/}
-                                {/*                </li>*/}
-                                {/*            </ul>*/}
-                                {/*        </div>*/}
-                                {/*    </div>*/}
-                                {/*</div>*/}
-                            </div>
                         </div>
-                        {/*<div className="text-box">*/}
-                        {/*    <h2>Talk to Your PDF AI Assistant <br/>- Straight to Knowledge Via Instant Q&A</h2>*/}
-                        {/*    <p className="text-[16px] text-[#6a6a6a]">*/}
-                        {/*        Streamline your PDF workflow with our PDF AI Chat tool. Talk to it,*/}
-                        {/*        ask it what you need, and watch the answers roll in*/}
-                        {/*    </p>*/}
-                        {/*</div>*/}
-                        {/*<div className="btn-box">*/}
-                        {/*    <a href="#" className="btn btn-primary capitalize"><span>Get Started for Free</span></a>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
             </section>
