@@ -22,7 +22,6 @@ export type SiteConfig = {
     creator: string
     ogImage: string
     headerLinks: Link[]
-    metadataBase: URL | string
     themeColors?: string | ThemeColor[]
     defaultNextTheme?: string
     icons: {

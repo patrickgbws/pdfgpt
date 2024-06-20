@@ -14,10 +14,10 @@ export default function Home() {
         <>
             <BannerSection />
             <UseCasesSection />
-            <ChatSection />
+            {/*<ChatSection />*/}
             {/*<KeyFeaturesSection />*/}
             {/*<TestimonialsSection />*/}
-            {/*<FaqSection />*/}
+            <FaqSection />
         </>
     );
 }

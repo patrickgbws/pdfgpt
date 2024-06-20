@@ -1,14 +1,3 @@
-.col-lg-4 {
-    flex: 0 0 auto;
-    width: 33.33333333%;
-}
-
-.col-lg-6 {
-    flex: 0 0 auto;
-    width: 50%;
-}
-
-
 .pdfai-header {
     padding-top: 180px;
     padding-bottom: 360px;
@@ -29,6 +18,7 @@
     top: 0;
     left: 0;
     position: absolute;
+    z-index: 1;
 }
 
 .sub-title {
@@ -215,50 +205,138 @@
 }
 
 
-
-.choose-item {
-    border-radius: 10px;
-    border: 1px solid rgba(27, 42, 82, 0.07);
-    background: #FFF;
-    padding: 40px 35px 35px;
-    margin: 15px;
+/*FAQ*/
+.pdfai-faq {
+    background-image: url(/images/bg/overlay-3.png);
+}
+.faq-widget-wrap {
     position: relative;
-    z-index: 1;
-    -webkit-transition: all .3s linear 0s;
-    -moz-transition: all .3s linear 0s;
-    -ms-transition: all .3s linear 0s;
-    -o-transition: all .3s linear 0s;
-    transition: all .3s linear 0s;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
-.choose-item:hover {
-    border-radius: 10px;
-    background: #FFF;
-    box-shadow: 0 16px 60px 0 rgba(26, 40, 75, 0.1);
+.accordion {
+    background-color: transparent;
+    border-bottom: 1px solid #dce3ed;
+    padding: 25px 10px;
+    margin-bottom: 0;
+}
+
+.accordion:last-child {
+    border-bottom-width: 0;
+}
+
+.accordion .question {
+    cursor: pointer;
+}
+
+.accordion.active-block:last-child {
+    border-bottom-width: 0;
+}
+
+.accordion.active-block {
+    background: rgba(255, 255, 255, 0.07);
     border-color: transparent;
+    border-bottom: 1px solid #dce3ed;
 }
 
-.choose-item-count {
+.accordion .question .question_box {
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title_no_a_18 {
+    font-size: 18px;
+    line-height: 26px;
+    color: #293a51;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+
+.accordion .question.active .question_box .title_no_a_18 {
+    color: #3f3eed;
+    font-weight: bolder;
+}
+
+.accordion .question .question_box .title_no_a_18 {
+    color: #6b7989;
+    font-weight: bolder;
+}
+
+.accordion .accordion-content {
+    font-size: 15px;
+    line-height: 25px;
+    padding-right: 25px;
+    color: #6b7989;
+    padding-top: 15px;
+}
+
+/*CAT*/
+.pdfai-cat {
+    position: relative;
+}
+.pdfai-cat:before {
     position: absolute;
-    right: 45px;
-    top: 44px;
-    color: rgba(125, 37, 236, 0.06);
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -1.2px;
-    display: block;
-    transform: rotate(-15deg);
+    content: '';
+    background: #020202;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+}
+.pdfai-cat .inner-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 60px 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.07);
+}
+.pdfai-cat .catshape {
+    background-image: url("/images/bg/shape.png");
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
 }
 
-.choose-item-img {
-    margin-bottom: 34px;
+.pdfai-cat .catcontents {
+    z-index: 2;
 }
 
-.choose-item-content p {
-    color: #1B2A52;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.6px;
+.pdfai-cat .catcontents .overlinetitle{
+    padding: 0;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    display: inline-block;
+    letter-spacing: 0.04rem;
+    color: #3f3eed;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 12px;
 }
+
+.pdfai-cat .catcontents .cattitle{
+    color: #494d6e;
+    font-size: 42px;
+    line-height: 46px;
+    font-weight: bold;
+    margin: 0 auto;
+    max-width: 900px;
+}
+

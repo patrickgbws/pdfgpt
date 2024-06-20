@@ -1,8 +1,6 @@
-"use client"; // 添加这行
+"use client"; // Add this line for Next.js client-side component
 
 import React, {useState} from 'react';
-import Image from "next/image";
-import Link from 'next/link';
 
 const FAQItemmessage = [
     {
@@ -37,82 +35,150 @@ const FAQItemmessage = [
     },
 ];
 
-const FAQItem: React.FC<{ question: string; answer: string }> = ({question, answer}) => {
-    const [isOpen, setIsOpen] = useState(true);
+const FaqSection = () => {
+    const [activeIndex, setActiveIndex] = useState(0); // Default to first item
 
-    const toggleFAQ = () => {
-        setIsOpen(!isOpen);
+    const handleToggle = (index) => {
+        setActiveIndex(activeIndex === index ? null : index); // Toggle active state
     };
 
     return (
-        <div className="faq-item">
-            <ul className="pl-0 mb-0">
-                <li className="block">
-                    <div className="faq-question" onClick={toggleFAQ}>
-                        <div className="text-[17px] text-[#3f94fd] font-[600] capitalize">{question}</div>
-                        <div className="faq-icon">
-                            <div className="icon-16px"
-                                 style={{
-                                     transform: `translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(${isOpen ? 45 : 0}deg) skew(0deg, 0deg)`,
-                                     transformStyle: 'preserve-3d',
-                                 }}>
-                                <div className="faq-icon-bar hoz"></div>
-                                <div className="faq-icon-bar ver"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="faq-answer" style={{height: isOpen ? 'auto' : '0px', overflow: 'hidden'}}>
-                        <p className="faq-answer-text">{answer}</p>
-                    </div>
-                </li>
-
-            </ul>
-        </div>
-    );
-};
-
-const FaqSection = () => {
-    return (
         <>
-            <section className="faq-style-two pt-[40px] pb-[30px] w-full">
+            <section className="pdfai-faq w-full py-[50px]">
                 <div className="container">
-                    <div className="sec-title mb-[40px] text-center">
-                        <span className="sub-title">PDF AI Chatbot -- Faqs</span>
-                        <h2>Frequently Asked Questions</h2>
-                        <p className="max-w-[900px] mx-auto text-[15px] leading-[27px] capitalize text-[#6d7c90] mt-4">
-                            At PDF AI Chatbot, we&apos;re a team of AI experts who get what it&apos;s like to deal with
-                            dense, multi-page PDFs. Making it easier for you to find, summarize, and understand all
-                            that information is why PDF AI Chatbot was created - it works no matter what kind of
-                            PDF content you want to explore.
-                        </p>
+                    <div className="section_title text-center">
+                        <div className="overline-title">PDF AI Chatbot -- FAQs</div>
+                        <h2 className="title">Frequently Asked Questions</h2>
                     </div>
-                    <div className="inner-box">
-                        <div className="grid faq-wrap">
-                            {FAQItemmessage.map((faq, index) => (
-                                <FAQItem
-                                    key={index}
-                                    question={faq.question_text}
-                                    answer={faq.answer_text}
-                                />
-                            ))}
-                        </div>
+                </div>
+                <div className="container flex flex-row mt-[40px]">
+                    <div className="w-[5%]">
+                        <div className="faq-widget-wrap"></div>
+                    </div>
+                    <div className="w-[90%]">
+                        <section className="block_faq style_two">
+                            <div className="accordion-box">
+                                {FAQItemmessage.map((faq, index) => (
+                                    <div
+                                        key={index}
+                                        className={`accordion trans ${activeIndex === index ? 'active-block' : ''}`}
+                                    >
+                                        <div
+                                            className={`question faq_header ${activeIndex === index ? 'active' : ''}`}
+                                            onClick={() => handleToggle(index)}
+                                        >
+                                            <div className="question_box">
+                                                <div className="title_no_a_18">{faq.question_text}</div>
+                                                <div className="plus_mins">
+                                                    <div className={`${activeIndex === index ? 'hidden' : 'block'}`}>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16">
+                                                            <path fill="#6B7989"
+                                                                  d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div className={`${activeIndex === index ? 'block' : 'hidden'}`}>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16">
+                                                            <path fill="#3f3eed"
+                                                                  d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className={`answer accordion-content ${activeIndex === index ? 'current' : 'hidden'}`}>
+                                            {faq.answer_text}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    </div>
+                    <div className="w-[5%]">
+                        <div className="faq-widget-wrap"></div>
                     </div>
                 </div>
             </section>
-            <section className="cta-style-two w-full mt-[60px]">
+            <section className="pdfai-cat w-full">
                 <div className="container">
                     <div className="inner-container">
-                        <div className="shape"></div>
-                        <div className="text-box">
-                            <h2>Talk to Your PDF AI Assistant <br/>- Straight to Knowledge Via Instant Q&A</h2>
-                            <p className="text-[16px] text-[#6a6a6a]">
-                                Streamline your PDF workflow with our PDF AI Chat tool. Talk to it,
-                                ask it what you need, and watch the answers roll in
-                            </p>
+                        <div className="catshape"></div>
+                        <div className="catcontents text-center mx-auto">
+                            <div className="section_title type_one g_enable">
+                                <div className="overlinetitle">BOOST YOUR WRITING PRODUCTIVITY</div>
+                                <div className="title_whole position-relative">
+                                    <h2 className="cattitle">
+                                        Talk to Your PDF AI Assistant - Straight to Knowledge Via Instant Q&A
+                                    </h2>
+                                </div>
+                                <p className="lead">Streamline your PDF workflow with our PDF AI Chat tool. Talk to it, ask it what you need, and watch the answers roll in.</p>
+                            </div>
+                            <div className="elementor-widget-wrap elementor-element-populated">
+                                <div>
+                                    <div className="elementor-widget-container">
+
+
+
+                                    </div>
+                                </div>
+                                <div
+                                    className="elementor-element elementor-element-e46feac elementor-widget elementor-widget-copygen-themebtns-v1"
+                                    data-id="e46feac" data-element_type="widget"
+                                    data-widget_type="copygen-themebtns-v1.default">
+                                    <div className="elementor-widget-container">
+
+                                        <div className="theme_btn_all">
+                                            <a href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;"
+                                               className="theme_btn">
+
+
+                                                Start writing for free <div className="icon">
+                                                <i className=" copy-arrow-long-right"></i>
+                                            </div>
+
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <div className="d-flex">
+                                                        <div className="icon"><i className=" copy-check-circle-fill"></i></div>
+                                                        <a className="links" href="#">No credit card required</a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className="d-flex">
+                                                        <div className="icon"><i class=" copy-check-circle-fill"></i></div>
+                                                        <a class="links" href="#">Cancel anytime </a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="d-flex">
+                                                        <div class="icon"><i class=" copy-check-circle-fill"></i></div>
+                                                        <a class="links" href="#">10+ tools to expolore </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="btn-box">
-                            <a href="#" className="btn btn-primary capitalize"><span>Get Started for Free</span></a>
-                        </div>
+                        {/*<div className="text-box">*/}
+                        {/*    <h2>Talk to Your PDF AI Assistant <br/>- Straight to Knowledge Via Instant Q&A</h2>*/}
+                        {/*    <p className="text-[16px] text-[#6a6a6a]">*/}
+                        {/*        Streamline your PDF workflow with our PDF AI Chat tool. Talk to it,*/}
+                        {/*        ask it what you need, and watch the answers roll in*/}
+                        {/*    </p>*/}
+                        {/*</div>*/}
+                        {/*<div className="btn-box">*/}
+                        {/*    <a href="#" className="btn btn-primary capitalize"><span>Get Started for Free</span></a>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </section>

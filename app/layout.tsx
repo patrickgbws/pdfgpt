@@ -6,17 +6,10 @@ import {ThemeProvider} from "@/components/ThemeProvider";
 import {siteConfig} from "@/config/site";
 import {cn} from "@/lib/utils";
 import "@/styles/globals.css";
-// import "@/styles/bootstrap.min.css";
 import "@/styles/style.css";
-// import "@/styles/materialdesignicons.min.css";
 import {Analytics} from "@vercel/analytics/react";
 import {Viewport} from "next";
 import {Inter as FontSans} from "next/font/google";
-
-export const fontSans = FontSans({
-    subsets: ["latin"],
-    variable: "--font-sans",
-});
 
 
 export const metadata = {
@@ -26,7 +19,6 @@ export const metadata = {
     authors: siteConfig.authors,
     creator: siteConfig.creator,
     icons: siteConfig.icons,
-    metadataBase: siteConfig.metadataBase,
     openGraph: siteConfig.openGraph,
     twitter: siteConfig.twitter,
 };
@@ -44,8 +36,7 @@ export default async function RootLayout({
         <head/>
         <body
             className={cn(
-                "min-h-screen bg-background font-sans antialiased",
-                fontSans.variable
+                "min-h-screen bg-background antialiased",
             )}
         >
         <ThemeProvider

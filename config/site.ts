@@ -9,7 +9,6 @@ const baseSiteConfig = {
         "Use PDF AI Chatbot to chat with your PDF. This free PDFGPT will summarize and answer any questions from documents in no time. Just ask your pdf, AI will do the rest.",
     url: "https://pdfgpt-beta.vercel.app/",
     ogImage: "https://starter.weijunext.com/og.png",
-    metadataBase: '/',
     keywords: [],
     authors: [
         {

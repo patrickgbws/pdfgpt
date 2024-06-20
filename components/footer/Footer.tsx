@@ -24,6 +24,8 @@ const FooterCompareNavLinks = [
         children: [
             {href: '/chatpdf-alternative', title: 'ChatPDF Alternative'},
             {href: '/pdfai-alternative', title: 'PDFAI Alternative'},
+            {href: '/askyourpdf-alternative', title: 'AskYourPDF Alternative'},
+            {href: '/humata-alternative', title: 'Humata Alternative'},
         ]
     },
 ];
@@ -49,8 +51,8 @@ const Footer = () => {
         <footer className="bg-[#020202] relative">
             <section>
                 <div className="container">
-                    <div className="pt-[80px] pb-[60px]">
-                        <div className="row clearfix">
+                    <div className="py-[60px]">
+                        <div className="flex flex-row justify-between clearfix">
                             <div className="col-lg-3 col-md-6 col-sm-12 footer-column">
                                 <div className="footer-widget logo-widget">
                                     <figure className="mb-[30px]">
@@ -127,10 +129,10 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#111111] relative py-[30px]">
-                    <p className="text-[#A9A7B0] text-center my-0 font-bold">
-                        {`Copyright © ${currentYear} `} All Rights Reserved By <Link href="/"
-                                                                                     className="text-[#3f94fd]">{authors[0].name}</Link>
+                <div className="bg-[#111111] relative py-[20px]">
+                    <p className="text-[#A9A7B0] text-center my-0">
+                        {`Copyright © ${currentYear} `} All Rights Reserved By
+                        <Link href="/" className="text-[#3f94fd]"> {authors[0].name}</Link>
                     </p>
                 </div>
             </section>

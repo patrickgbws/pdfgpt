@@ -26,9 +26,9 @@ const iframedescriptiondata = [
 const BannerSection = () => {
     return (
         <>
-            <section className="pdfai-header w-full relative">
+            <section className="pdfai-header w-full">
                 <div className="pdfai-header-background-overlay"></div>
-                <div className="container text-center">
+                <div className="container text-center relative z-[2]">
                     <div className="">
                         <span className="sub-title">Read Faster Your Documents</span>
                         <div className="title_whole position-relative ">
