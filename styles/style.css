@@ -33,7 +33,7 @@
     border-radius: 30px;
     padding: 6px 25px;
     margin-bottom: 15px;
-    border: 1px solid rgb(63 62 237);
+    border: 1px solid #3f94fd;
 }
 
 .theme_btn {
@@ -95,8 +95,8 @@
     line-height: 1rem;
     display: inline-block;
     letter-spacing: 0.04rem;
-    color: rgb(63 62 237);
-    border: 1px solid rgb(63, 62, 237);
+    color: #3f94fd;
+    border: 1px solid #3f94fd;
     border-radius: 50px;
     text-transform: uppercase;
     font-weight: 600;
@@ -200,7 +200,7 @@
     justify-content: center;
     border-radius: 50%;
     background: #f1f3fa;
-    color: #3f3eed;
+    color: #3f94fd;
     margin-right: 10px;
 }
 
@@ -260,7 +260,7 @@
 }
 
 .accordion .question.active .question_box .title_no_a_18 {
-    color: #3f3eed;
+    color: #3f94fd;
     font-weight: bolder;
 }
 
@@ -295,7 +295,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
+    background: #f9f9ff;
     padding: 60px 40px;
     border-radius: 20px;
     overflow: hidden;
@@ -324,7 +324,7 @@
     line-height: 1rem;
     display: inline-block;
     letter-spacing: 0.04rem;
-    color: #3f3eed;
+    color: #3f94fd;
     text-transform: uppercase;
     font-weight: 600;
     margin: 0;
@@ -340,3 +340,14 @@
     max-width: 900px;
 }
 
+.pdfai-cat .cat-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f1f3fa;
+    color: #55B59E;
+    margin-right: 10px;
+}

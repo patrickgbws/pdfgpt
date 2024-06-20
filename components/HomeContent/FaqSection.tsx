@@ -1,6 +1,7 @@
 "use client"; // Add this line for Next.js client-side component
 
 import React, {useState} from 'react';
+import Link from "next/link";
 
 const FAQItemmessage = [
     {
@@ -78,7 +79,7 @@ const FaqSection = () => {
                                                     </div>
                                                     <div className={`${activeIndex === index ? 'block' : 'hidden'}`}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16">
-                                                            <path fill="#3f3eed"
+                                                            <path fill="#3f94fd"
                                                                   d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/>
                                                         </svg>
                                                     </div>
@@ -111,34 +112,58 @@ const FaqSection = () => {
                                         Talk to Your PDF AI Assistant - Straight to Knowledge Via Instant Q&A
                                     </h2>
                                 </div>
-                                <p className="lead">Streamline your PDF workflow with our PDF AI Chat tool. Talk to it, ask it what you need, and watch the answers roll in.</p>
+                                <p className="lead mb-[40px] px-[50px] py-[20px]">Streamline your PDF workflow with our PDF AI Chat tool. Talk to it, ask it what you need, and watch the answers roll in.</p>
+                            </div>
+                            <div>
+                                <Link
+                                    href="/"
+                                    rel="nofollow"
+                                    target="_blank"
+                                    className="theme_btn">
+                                    Get Started for Free
+                                </Link>
+                            </div>
+                            <div className="mt-[25px]">
+                                <ul className="flex flex-row justify-center">
+                                    <li className="flex flex-row items-center mx-[10px]">
+                                        <div className="cat-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                                                    fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <span>ChatGPT 4</span>
+                                    </li>
+                                    <li className="flex flex-row items-center mx-[10px]">
+                                        <div className="cat-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                                                    fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <span>PDF AI Chatbot</span>
+                                    </li>
+                                    <li className="flex flex-row items-center mx-[10px]">
+                                        <div className="cat-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
+                                                    fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <span>PDF Tools</span>
+                                    </li>
+                                </ul>
                             </div>
                             <div className="elementor-widget-wrap elementor-element-populated">
-                                <div>
-                                    <div className="elementor-widget-container">
-
-
-
-                                    </div>
-                                </div>
                                 <div
                                     className="elementor-element elementor-element-e46feac elementor-widget elementor-widget-copygen-themebtns-v1"
                                     data-id="e46feac" data-element_type="widget"
                                     data-widget_type="copygen-themebtns-v1.default">
                                     <div className="elementor-widget-container">
 
-                                        <div className="theme_btn_all">
-                                            <a href="#" target="&quot;_blank&quot;" rel="&quot;nofollow&quot;"
-                                               className="theme_btn">
-
-
-                                                Start writing for free <div className="icon">
-                                                <i className=" copy-arrow-long-right"></i>
-                                            </div>
-
-
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                                 {/*<div>*/}
