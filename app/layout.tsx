@@ -19,7 +19,6 @@ export const metadata = {
     creator: siteConfig.creator,
     icons: siteConfig.icons,
     openGraph: siteConfig.openGraph,
-    twitter: siteConfig.twitter,
 };
 export const viewport: Viewport = {
     themeColor: siteConfig.themeColors,
