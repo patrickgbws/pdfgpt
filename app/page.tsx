@@ -16,7 +16,7 @@ export default function Home() {
             <UseCasesSection />
             {/*<ChatSection />*/}
             {/*<KeyFeaturesSection />*/}
-            {/*<TestimonialsSection />*/}
+            <TestimonialsSection />
             <FaqSection />
         </>
     );
