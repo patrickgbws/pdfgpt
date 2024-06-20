@@ -36,9 +36,9 @@ const FAQItemmessage = [
 ];
 
 const FaqSection = () => {
-    const [activeIndex, setActiveIndex] = useState(0); // Default to first item
+    const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
-    const handleToggle = (index) => {
+    const handleToggle = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index); // Toggle active state
     };
 
@@ -141,32 +141,32 @@ const FaqSection = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <div>
-                                        <div>
-                                            <ul>
-                                                <li>
-                                                    <div className="d-flex">
-                                                        <div className="icon"><i className=" copy-check-circle-fill"></i></div>
-                                                        <a className="links" href="#">No credit card required</a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div className="d-flex">
-                                                        <div className="icon"><i class=" copy-check-circle-fill"></i></div>
-                                                        <a class="links" href="#">Cancel anytime </a>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="d-flex">
-                                                        <div class="icon"><i class=" copy-check-circle-fill"></i></div>
-                                                        <a class="links" href="#">10+ tools to expolore </a>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                {/*<div>*/}
+                                {/*    <div>*/}
+                                {/*        <div>*/}
+                                {/*            <ul>*/}
+                                {/*                <li>*/}
+                                {/*                    <div className="d-flex">*/}
+                                {/*                        <div className="icon"><i className=" copy-check-circle-fill"></i></div>*/}
+                                {/*                        <a className="links" href="#">No credit card required</a>*/}
+                                {/*                    </div>*/}
+                                {/*                </li>*/}
+                                {/*                <li>*/}
+                                {/*                    <div className="d-flex">*/}
+                                {/*                        <div className="icon"><i class=" copy-check-circle-fill"></i></div>*/}
+                                {/*                        <a class="links" href="#">Cancel anytime </a>*/}
+                                {/*                    </div>*/}
+                                {/*                </li>*/}
+                                {/*                <li>*/}
+                                {/*                    <div class="d-flex">*/}
+                                {/*                        <div class="icon"><i class=" copy-check-circle-fill"></i></div>*/}
+                                {/*                        <a class="links" href="#">10+ tools to expolore </a>*/}
+                                {/*                    </div>*/}
+                                {/*                </li>*/}
+                                {/*            </ul>*/}
+                                {/*        </div>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
                             </div>
                         </div>
                         {/*<div className="text-box">*/}
