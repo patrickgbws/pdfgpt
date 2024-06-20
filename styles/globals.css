@@ -224,7 +224,6 @@
 
 @media (min-width: 1200px) {
     .container {
-        position: static;
         max-width: 1320px;
         padding: 0 15px;
     }
