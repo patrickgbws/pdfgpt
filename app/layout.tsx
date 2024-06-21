@@ -1,27 +1,29 @@
-import BaiDuAnalytics from "@/app/BaiDuAnalytics";
-import GoogleAnalytics from "@/app/GoogleAnalytics";
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
-import {ThemeProvider} from "@/components/ThemeProvider";
+// 站点文件
 import {siteConfig} from "@/config/site";
-import {cn} from "@/lib/utils";
+
+// 样式文件
 import "@/styles/globals.css";
 import "@/styles/style.css";
+
+// components
+import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
+
+
+import {cn} from "@/lib/utils";
+import GoogleAnalytics from "@/app/GoogleAnalytics";
+import BaiDuAnalytics from "@/app/BaiDuAnalytics";
 import {Analytics} from "@vercel/analytics/react";
 import {Viewport} from "next";
 
 
 export const metadata = {
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.description,
     keywords: siteConfig.keywords,
-    authors: siteConfig.authors,
-    creator: siteConfig.creator,
     icons: siteConfig.icons,
     openGraph: siteConfig.openGraph,
-};
-export const viewport: Viewport = {
-    themeColor: siteConfig.themeColors,
 };
 
 export default async function RootLayout({
@@ -32,29 +34,20 @@ export default async function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
         <head/>
-        <body
-            className={cn(
-                "min-h-screen antialiased",
-            )}
-        >
-        <ThemeProvider
-            attribute="class"
-            defaultTheme={siteConfig.defaultNextTheme}
-            enableSystem
-        >
+        <body className={cn("min-h-screen antialiased")}>
             <Header/>
             <main className="flex flex-col items-center">{children}</main>
             <Footer/>
+            <ScrollToTopButton />
             <Analytics/>
-        </ThemeProvider>
-        {process.env.NODE_ENV === "development" ? (
-            <></>
-        ) : (
-            <>
-                <GoogleAnalytics/>
-                <BaiDuAnalytics/>
-            </>
-        )}
+            {process.env.NODE_ENV === "development" ? (
+                <></>
+            ) : (
+                <>
+                    <GoogleAnalytics/>
+                    <BaiDuAnalytics/>
+                </>
+            )}
         </body>
         </html>
     );

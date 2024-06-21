@@ -13,11 +13,11 @@ export default function Home() {
     return (
         <>
             <BannerSection />
-            <UseCasesSection />
-            <ChatSection />
-            <KeyFeaturesSection />
-            <TestimonialsSection />
-            <FaqSection />
+            {/*<UseCasesSection />*/}
+            {/*<ChatSection />*/}
+            {/*<KeyFeaturesSection />*/}
+            {/*<TestimonialsSection />*/}
+            {/*<FaqSection />*/}
         </>
     );
 }

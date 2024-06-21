@@ -1,4 +1,6 @@
 import React from "react";
+
+
 export const headerNavLinks = [
     { href: '/', title: 'Home' },
     { href: '/other-tools', title: 'Other Tools' },
@@ -32,10 +34,10 @@ export const ArrowDownIcon = () => (
 );
 
 //ArrowUpIcon
-export const ArrowUpIcon = () => (
+export const ArrowUpIcon = (props) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-[22px] w-[22px]"
+        className={props.className}
         viewBox="0 0 20 20"
         fill="currentColor"
     >

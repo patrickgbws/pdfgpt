@@ -87,12 +87,10 @@ const KeyFeaturesSection = () => {
                                     <div className="icon-box"><i className="icon-22"></i></div>
                                     <h3>Serious Data Security</h3>
                                     <p>
-                                        We take your data security and privacy very seriously, using top-notch practices
-                                        and following strict GDPR regulations.You can trust that your information is safe
-                                        with us - we never use your data for AI training or share it with third parties,
-                                        and everything is fully encrypted.Plus, we regularly conduct security audits to
-                                        ensure our systems are secure, and we use SSL/TLS encryption to protect all
-                                        data transmissions.
+                                        We never use your uploaded files for AI training or share them with third
+                                        parties, and everything is fully encrypted. Plus, we regularly conduct
+                                        security audits to ensure our systems are secure, and we use SSL/TLS
+                                        encryption to protect all data transmissions.
                                     </p>
                                 </div>
                             </div>

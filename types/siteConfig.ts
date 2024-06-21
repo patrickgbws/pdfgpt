@@ -1,28 +1,14 @@
 import {IconType} from "react-icons"
-
-export type AuthorsConfig = {
-    name: string
-    url: string
-    twitter?: string
-}
 export type Link = {
     name: string
     href: string
 }
-export type ThemeColor = {
-    media: string
-    color: string
-}
 export type SiteConfig = {
     name: string
+    title: string
     description: string
     url: string
     keywords: string[]
-    authors: AuthorsConfig[]
-    creator: string
-    headerLinks: Link[]
-    themeColors?: string | ThemeColor[]
-    defaultNextTheme?: string
     icons: {
         icon: string
         shortcut?: string

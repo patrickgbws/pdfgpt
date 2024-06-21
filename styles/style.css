@@ -1,83 +1,238 @@
-/*HeaderSection*/
-.pdfaiheader {
+/* ScrollToTopButton ---start */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(255, 100, 45);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: rgba(255, 100, 45, 0.84);
+}
+
+/* ScrollToTopButton ---start */
+
+
+/* HeaderSection ---start */
+.chatpdfai-header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 20px 0;
-    background-color: transparent;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1000;
+    z-index: 1000; /* 可能需要根据页面需求调整 */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent; /* 初始状态透明背景 */
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.pdfaiheader.scrolled {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.chatpdfai-header.scrolled {
+    background-color: #ffffff; /* 滚动时的白色背景 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影 */
 }
 
-.pdfaiheader .row {
+.chatpdfai-header > .container >.row{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    flex: 1;
+.chatpdfai-header .logo {
+
 }
 
-.menu {
-    flex: 2;
-    text-align: center;
+.chatpdfai-header .logo span {
+    font-size: 30px;
 }
 
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.chatpdfai-header .menu {
+    display: flex;
+    flex-direction: row;
 }
 
-.menu ul li {
-    display: inline-block;
-    margin: 0 10px;
+.chatpdfai-header .menu .menu-item {
+    margin-right: 15px;
 }
 
-.button {
-    flex: 1;
-    text-align: right;
+.chatpdfai-header .menu .menu-item ul {
+    display: flex;
+    flex-direction: row;
 }
 
-.menu-item {
+.chatpdfai-header .menu .menu-item ul li {
+    color: #000000;
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+.chatpdfai-header .menu .menu-item ul li a{
+    display: flex;
+    flex-direction: row;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.chatpdfai-header .menu .menu-item ul li span{
+    display: flex;
+    flex-direction: row;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.chatpdfai-header .menu-button-style {
+    color: #ffffff;
+    font-size: 15px;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    font-weight: 600;
+    padding: 10px 20px;
+    white-space: nowrap;
+    border-radius: 10px;
+    text-transform: none;
+    text-decoration: none;
+    background-color: #ff8f20;
+    border: 1px solid #ff8f20;
+}
+
+.chatpdfai-header .menu-button-style:hover {
+    background-color: #ec861f;
+}
+
+.chatpdfai-header .menuItem {
     position: relative;
     list-style: none;
-    margin-right: 20px; /* 调整菜单项之间的间距 */
 }
 
-.menu-link {
+.chatpdfai-header .menuLink {
     display: flex;
     align-items: center;
     cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 16px;
 }
 
-.menu-link span svg {
-    width: 20px;
-    height: 20px;
+.chatpdfai-header .menuLink > span:first-child {
+    margin-right: 5px;
 }
 
-.menu-link:hover {
-    color: #ff1d1d;
+.chatpdfai-header .arrowIcon {
+    margin-left: 5px;
+    font-size: 10px;
+    transition: transform 0.3s ease; /* 添加过渡效果 */
 }
 
-.arrow-icon {
-    margin-left: auto; /* 将箭头符号放到菜单项的最右侧 */
+.chatpdfai-header .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 10px 0;
 }
+
+.chatpdfai-header .menuLink:hover .submenu {
+    display: block;
+}
+
+/* HeaderSection ---end */
+
+
+/*HeaderSection*/
+/*.pdfaiheader {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    padding: 20px 0;*/
+/*    background-color: transparent;*/
+/*    transition: background-color 0.3s ease, box-shadow 0.3s ease;*/
+/*    z-index: 1000;*/
+/*}*/
+
+/*.pdfaiheader.scrolled {*/
+/*    background-color: white;*/
+/*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.pdfaiheader .row {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.logo {*/
+/*    flex: 1;*/
+/*}*/
+
+/*.menu {*/
+/*    flex: 2;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.menu ul {*/
+/*    list-style-type: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.menu ul li {*/
+/*    display: inline-block;*/
+/*    margin: 0 10px;*/
+/*}*/
+
+/*.button {*/
+/*    flex: 1;*/
+/*    text-align: right;*/
+/*}*/
+
+/*.menu-item {*/
+/*    position: relative;*/
+/*    list-style: none;*/
+/*    margin-right: 20px; !* 调整菜单项之间的间距 *!*/
+/*}*/
+
+/*.menu-link {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    cursor: pointer;*/
+/*    text-decoration: none;*/
+/*    color: inherit;*/
+/*    padding: 10px;*/
+/*    font-weight: 600;*/
+/*    font-size: 16px;*/
+/*}*/
+
+/*.menu-link span svg {*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*}*/
+
+/*.menu-link:hover {*/
+/*    color: #ff1d1d;*/
+/*}*/
+
+/*.arrow-icon {*/
+/*    margin-left: auto; !* 将箭头符号放到菜单项的最右侧 *!*/
+/*}*/
 
 .submenu {
     display: none;
@@ -101,13 +256,6 @@
 
 }
 
-/*.submenu ul {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: flex-start;*/
-/*    justify-content: center;*/
-/*}*/
-
 .submenu li {
     padding: 10px;
 }
@@ -116,24 +264,6 @@
     padding-left: 10px;
     color: #ff1d1d;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*BannerSection*/
@@ -308,7 +438,7 @@
     animation-play-state: paused;
 }
 
-.use-Cases-text-box h3{
+.use-Cases-text-box h3 {
     position: relative;
     display: block;
     font-size: 48px;
@@ -348,6 +478,7 @@
 .pdfai-faq {
     background-image: url(/images/bg/overlay-3.png);
 }
+
 .faq-widget-wrap {
     position: relative;
     width: 100%;
@@ -444,7 +575,7 @@
 }
 
 
-.testimonialCard-top .img-icon{
+.testimonialCard-top .img-icon {
     width: 60px;
     flex: 0 0 auto;
     margin-right: 20px;
@@ -471,11 +602,11 @@
 }
 
 .testimonialCard-bottom .text {
-     color: #474c56;
-     font-size: 16px;
-     line-height: 25px;
-     padding: 0 15px;
-     margin-bottom: 25px;
+    color: #474c56;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0 15px;
+    margin-bottom: 25px;
 }
 
 .testimonialCard-bottom {
@@ -513,7 +644,6 @@
     font-size: 0.9em;
     color: #666;
 }
-
 
 
 .testimonial-item-two {
@@ -590,6 +720,7 @@
 .pdfai-cat {
     position: relative;
 }
+
 .pdfai-cat:before {
     position: absolute;
     content: '';
@@ -599,6 +730,7 @@
     left: 0;
     bottom: 0;
 }
+
 .pdfai-cat .inner-container {
     position: relative;
     display: flex;
@@ -610,6 +742,7 @@
     overflow: hidden;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.07);
 }
+
 .pdfai-cat .catshape {
     background-image: url("/images/bg/shape.png");
     position: absolute;
@@ -627,7 +760,7 @@
     z-index: 2;
 }
 
-.pdfai-cat .catcontents .overlinetitle{
+.pdfai-cat .catcontents .overlinetitle {
     padding: 0;
     font-size: 0.875rem;
     line-height: 1rem;
@@ -640,7 +773,7 @@
     padding-bottom: 12px;
 }
 
-.pdfai-cat .catcontents .cattitle{
+.pdfai-cat .catcontents .cattitle {
     color: #494d6e;
     font-size: 42px;
     line-height: 46px;
@@ -667,6 +800,7 @@
     flex: 0 0 auto;
     width: 33.33333333%;
 }
+
 .process-section {
     position: relative
 }
@@ -699,7 +833,7 @@
     font-weight: 500;
     padding: 10px 30px;
     border-radius: 5px;
-    background: rgba(255,255,255,0.07);
+    background: rgba(255, 255, 255, 0.07);
     margin-bottom: 25px
 }
 
@@ -749,7 +883,7 @@
     border-radius: 50%;
     font-size: 28px;
     font-weight: 600;
-    background: rgba(255,29,29,0.10);
+    background: rgba(255, 29, 29, 0.10);
     margin-bottom: 30px;
     z-index: 1;
     transition: all 500ms ease
@@ -776,7 +910,7 @@
     height: 1px;
     left: 68px;
     top: 29px;
-    border-top: 1px dashed rgba(255,29,29,0.30);
+    border-top: 1px dashed rgba(255, 29, 29, 0.30);
     z-index: -1
 }
 
@@ -793,7 +927,7 @@
     margin-bottom: 15px
 }
 
-.processing-block-two .inner-box p{
+.processing-block-two .inner-box p {
     text-align: center;
     position: relative;
     color: #6a6a6a;
@@ -810,28 +944,32 @@
 
 @media only screen and (max-width: 991px) {
     .processing-block-two .inner-box .count-text:after {
-        display:none
+        display: none
     }
 }
 
 @media only screen and (max-width: 767px) {
     .process-section {
-        padding:70px 0
+        padding: 70px 0
     }
 
     .process-style-two {
         padding: 70px 0
     }
 }
+
 .processing-block:first-child .processing-block-two .inner-box .count-text:before {
     border-color: #ff1d1d;
 }
+
 .processing-block-two .inner-box .count-text {
     color: #ff1d1d;
 }
+
 .processing-block:first-child .processing-block-two .inner-box .count-text {
     background: #ff1d1d;
 }
+
 .processing-block-two .inner-box .count-text:before {
     position: absolute;
     content: '';
@@ -841,24 +979,30 @@
     top: -8px;
     border-radius: 50%;
 }
+
 .processing-block-two .inner-box .count-text:before {
     border: 1px solid #ff1d1d;
 }
+
 .more-btn {
     text-align: center;
 }
+
 .theme-btn.btn-three {
     color: #ff1d1d;
     border: 1px solid #ff1d1d;
 }
+
 .theme-btn.btn-three span {
     padding: 12px 30px;
 }
+
 .theme-btn span {
     position: relative;
     display: inline-block;
     padding: 18px 38px;
 }
+
 .theme-btn {
     position: relative;
     display: inline-block;

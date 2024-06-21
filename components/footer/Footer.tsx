@@ -45,7 +45,7 @@ const FooterAboutNavLinks = [
 const Footer = () => {
     const d = new Date();
     const currentYear = d.getFullYear();
-    const {authors} = siteConfig;
+    const {name} = siteConfig;
 
     return (
         <footer className="bg-[#020202] relative">
@@ -64,7 +64,7 @@ const Footer = () => {
                                                     width={100}
                                                     height={22}
                                                     className="h-[40px] w-auto mr-[8px]"/>
-                                                {authors[0].name}
+                                                {name}
                                             </a>
                                         </Link>
                                     </figure>
@@ -132,7 +132,7 @@ const Footer = () => {
                 <div className="bg-[#111111] relative py-[20px]">
                     <p className="text-[#A9A7B0] text-center my-0">
                         {`Copyright © ${currentYear} `} All Rights Reserved By
-                        <Link href="/" className="text-[#3f94fd]"> {authors[0].name}</Link>
+                        <Link href="/" className="text-[#3f94fd]"> {name}</Link>
                     </p>
                 </div>
             </section>

@@ -4,8 +4,8 @@ import React, {useEffect, useState} from "react";
 import {siteConfig} from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
-import { headerNavLinks } from "@/data/websitedata";
-import { ArrowDownIcon, ArrowUpIcon } from "@/data/websitedata";
+import {headerNavLinks} from "@/data/websitedata";
+
 
 interface MenuItemProps {
     item: {
@@ -19,49 +19,51 @@ interface MenuItemProps {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [showSubMenu, setShowSubMenu] = useState(false);
 
-    const handleToggle = () => {
-        setIsExpanded(!isExpanded);
+    const handleMouseEnter = () => {
+        setShowSubMenu(true);
+    };
+
+    const handleMouseLeave = () => {
+        setShowSubMenu(false);
     };
 
     return (
-        <li className={`menu-item ${isExpanded ? 'expanded' : ''}`}>
+        <li className={"menuItem"}>
             {item.children ? (
-                <a onClick={handleToggle} className="menu-link">
-                    {item.title}
-                    <span className="arrow-icon">{isExpanded ? <ArrowUpIcon /> : <ArrowDownIcon />}</span>
-                </a>
+                <div className={"menuLink"} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <span>{item.title}</span>
+                    <span className={`"arrowIcon"`}></span>
+                    {showSubMenu && (
+                        <ul className={"submenu"}>
+                            {item.children.map((childItem, index) => (
+                                <li key={index}>
+                                    <Link href={childItem.href}>
+                                        {childItem.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
             ) : (
-                <Link href={item.href} className="menu-link">
+                <Link href={item.href}>
                     {item.title}
                 </Link>
-            )}
-
-            {item.children && (
-                <ul className={`submenu ${isExpanded ? 'expanded' : ''}`}>
-                    {item.children.map((childItem, index) => (
-                        <li key={index}>
-                            <Link href={childItem.href}>
-                                {childItem.title}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
             )}
         </li>
     );
 };
 
 
-const Header = () => {
-    const {authors} = siteConfig;
+const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollTop = window.scrollY;
-            if (scrollTop > 0) {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 0) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
@@ -76,29 +78,39 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`pdfaiheader ${isScrolled ? "scrolled" : ""}`}>
-            <div className="container row">
-                <div className="logo">
-                    <Link href="/" className="flex items-center space-x-1 font-bold">
-                        <Image
-                            src="/images/logo.png"
-                            alt="PDF AI Chatbot-logo"
-                            width={100}
-                            height={22}
-                            className="h-[40px] w-auto mr-[8px]"
-                        />
-                        <span>{authors[0].name}</span>
-                    </Link>
-                </div>
-                <nav className="menu">
-                    <ul>
-                        {headerNavLinks.map((item, index) => (
-                            <MenuItem key={index} item={item} />
-                        ))}
-                    </ul>
-                </nav>
-                <div className="button">
-                    <button>Button</button>
+        <header className={`"chatpdfai-header" ${isScrolled ? "scrolled" : ""}`}>
+            <div className={"container"}>
+                <div className={"row"}>
+                    <div className={"logo"}>
+                        <Link href="/" className="flex items-center space-x-1 font-bold">
+                            <Image
+                                src="/images/logo.png"
+                                alt="PDF AI Chatbot-logo"
+                                width={100}
+                                height={22}
+                                className="h-[40px] w-auto mr-[8px]"
+                            />
+                            <span>PDF AI Chatbot</span>
+                        </Link>
+                    </div>
+                    <div className={"menu"}>
+                        <div className={"menu-item"}>
+                            <ul>
+                                {headerNavLinks.map((item: any, index: number) => (
+                                    <MenuItem key={index} item={item}/>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className={"menu-button"}>
+                            <Link
+                                href="/"
+                                rel="nofollow"
+                                className={"menu-button-style"}
+                            >
+                                <span>Try It for Free</span>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
