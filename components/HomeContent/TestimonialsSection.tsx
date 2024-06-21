@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
                     <div className="section_title text-center">
                         <div className="overline-title"> PDF AI Chatbot -- testimonial</div>
                         <h2 className="title">
-                            Customers Love PDF AI Chatbot!
+                            Customers Love Our PDF AI Chatbot!
                         </h2>
                         <p className="lead">
                             We understand how challenging it can be to work with PDFs, which is why we&apos;ve created AI PDF chat features that users love!
@@ -98,7 +98,7 @@ const TestimonialsSection = () => {
                                     </div>
                                     <div className={"name"}>
                                         <h5>{testimonial.name}</h5>
-                                        <p className={"title"}>{testimonial.role}  ( {testimonial.unit} )</p>
+                                        <p className={"title"}>{testimonial.role} &nbsp; ( {testimonial.unit} )</p>
                                     </div>
                                 </div>
                                 <div className={"testimonialCard-bottom"}>

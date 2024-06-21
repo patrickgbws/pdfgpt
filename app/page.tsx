@@ -14,8 +14,8 @@ export default function Home() {
         <>
             <BannerSection />
             <UseCasesSection />
-            {/*<ChatSection />*/}
-            {/*<KeyFeaturesSection />*/}
+            <ChatSection />
+            <KeyFeaturesSection />
             <TestimonialsSection />
             <FaqSection />
         </>

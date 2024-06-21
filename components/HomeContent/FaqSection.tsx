@@ -106,7 +106,7 @@ const FaqSection = () => {
                         <div className="catshape"></div>
                         <div className="catcontents text-center mx-auto">
                             <div className="section_title type_one g_enable">
-                                <div className="overlinetitle">BOOST YOUR WRITING PRODUCTIVITY</div>
+                                <div className="overlinetitle">BOOST YOUR WORKING PRODUCTIVITY</div>
                                 <div className="title_whole position-relative">
                                     <h2 className="cattitle">
                                         Talk to Your PDF AI Assistant - Straight to Knowledge Via Instant Q&A

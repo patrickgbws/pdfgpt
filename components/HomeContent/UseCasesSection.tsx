@@ -145,7 +145,7 @@ const UseCasesSection: React.FC = () => {
                                                         fill="currentColor"/>
                                                 </svg>
                                             </div>
-                                            <span>Compare the financial statements of two quarters in the document</span>
+                                            <span>Compare the financial statements of two quarters in the document.</span>
                                         </div>
                                     </li>
                                     <li>
@@ -248,7 +248,7 @@ const UseCasesSection: React.FC = () => {
                                                         fill="currentColor"/>
                                                 </svg>
                                             </div>
-                                            <span>Generate a title for your essay</span>
+                                            <span>Generate a title for your essay.</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -340,7 +340,7 @@ const UseCasesSection: React.FC = () => {
                                                         fill="currentColor"/>
                                                 </svg>
                                             </div>
-                                            <span>Provide a detailed breakdown of the budget allocations in the report</span>
+                                            <span>Provide a detailed breakdown of the budget allocations in the report.</span>
                                         </div>
                                     </li>
                                     <li>
@@ -352,7 +352,7 @@ const UseCasesSection: React.FC = () => {
                                                         fill="currentColor"/>
                                                 </svg>
                                             </div>
-                                            <span>Develop key talking points for a sales pitch based on the marketing material</span>
+                                            <span>Develop key talking points for a sales pitch based on the marketing material.</span>
                                         </div>
                                     </li>
                                     <li>

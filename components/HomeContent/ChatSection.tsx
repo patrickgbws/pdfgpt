@@ -15,60 +15,37 @@ const ChatSection: React.FC = () => {
                             Chat with Your AI PDF Right Away!
                         </h2>
                     </div>
-                    <div className="flex flex-row">
-                        <div className="feature-top mb-50 tp_fade_bottom">
-                            <div className="feature-item feature-item-1">
-                                <h5 className="feature-item-title">
-                                    Welcome screen
-                                </h5>
-                                <p>
-                                    Lorem Ipsum is simply dummy text’s of the one most printing and
-                                    typesetting is an one of the best.
-                                </p>
-                            </div>
-                            <div className="feature-item feature-item-2"><h5 className="feature-item-title">One-click
-                                management</h5><p>Lorem Ipsum is simply dummy text’s of the one most printing and
-                                typesetting is an one of the best.</p></div>
-                            <div className="feature-item feature-item-3"><h5 className="feature-item-title">Custom
-                                greetings</h5><p>Lorem Ipsum is simply dummy text’s of the one most printing and
-                                typesetting is an one of the best.</p></div>
-                        </div>
-                        <div className={`col-xl-3 col-lg-4 col-md-6 tp_fade_left`} data-fade-from="left"
-                             style={{translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)'}}>
-                            <div className="choose-item mb-30">
-                                <span className="choose-item-count">01</span>
-                                <div className="choose-item-img">
-                                    <Image src="/images/icon/pdf.png" alt="Image Not Found" width={44} height={44}/>
-                                </div>
-                                <div className="choose-item-content">
-                                    <p>Upload the PDF file you want to chat with</p>
+                    <div className="flex flex-row mt-[40px]">
+                        <div className="col-lg-4 col-md-6 col-sm-12 processing-block">
+                            <div className="processing-block-two">
+                                <div className="inner-box">
+                                    <span className="count-text">1</span>
+                                    <h3>Upload a PDF</h3>
+                                    <p>No limitations on PDF uploads. Feel free to upload any file you want to chat with, one PDF per upload.</p>
                                 </div>
                             </div>
                         </div>
-                        <div className={`col-xl-3 col-lg-4 col-md-6 tp_fade_left`} data-fade-from="left"
-                             style={{translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)'}}>
-                            <div className="choose-item mb-30">
-                                <span className="choose-item-count">02</span>
-                                <div className="choose-item-img">
-                                    <Image src="/images/icon/pdf.png" alt="Image Not Found" width={44} height={44}/>
-                                </div>
-                                <div className="choose-item-content">
-                                    <p>Ask your pdf</p>
+                        <div className="col-lg-4 col-md-6 col-sm-12 processing-block">
+                            <div className="processing-block-two">
+                                <div className="inner-box">
+                                    <span className="count-text">2</span>
+                                    <h3>Ask your pdf</h3>
+                                    <p>Then, you can start chatting with PDF and ask as many questions as you want - no limitations.</p>
                                 </div>
                             </div>
                         </div>
-                        <div className={`col-xl-3 col-lg-4 col-md-6 tp_fade_left`} data-fade-from="left"
-                             style={{translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate(0px, 0px)'}}>
-                            <div className="choose-item mb-30">
-                                <span className="choose-item-count">03</span>
-                                <div className="choose-item-img">
-                                    <Image src="/images/icon/pdf.png" alt="Image Not Found" width={44} height={44}/>
-                                </div>
-                                <div className="choose-item-content">
-                                    <p>Get your answer</p>
+                        <div className="col-lg-4 col-md-6 col-sm-12 processing-block">
+                            <div className="processing-block-two">
+                                <div className="inner-box">
+                                    <span className="count-text">3</span>
+                                    <h3>Get your answer.</h3>
+                                    <p>Our PDF AI will deliver answers in a few seconds. </p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="more-btn">
+                        <a href="/" className="theme-btn btn-three"><span>Drop a PDF here</span></a>
                     </div>
                 </div>
 
